@@ -1,10 +1,47 @@
 # Wrapped ERC20
 
-Wrapped ERC20 is a tool to 'upgrade' older ERC20 token implementations with the [return value bug](https://github.com/Uniswap/uniswap-frontend/issues/320) to the latest standard implementation.
+Wrapped ERC20 allows you to upgrade older ERC20 token implementations with the [return value bug](https://github.com/Uniswap/uniswap-frontend/issues/320) to the latest standard implementation. This enables a list of previously incompatible ERC20 tokens to access DeFi protocols such as Uniswap.
 
-This enables a list of previously incompatible ERC20 tokens to access DeFi protocols such as Uniswap.
+## Background
+
+TenX aims to provide global banking services built on top of crypto. As such, we want the PAY token to be compatible with the [Top 10 (Decentralized Finance)](http://defipulse.com/) DeFi protocols and give token holders access to the greater DeFi ecosystem moving forward.
+
+The PAY token’s ‘return value bug’  makes it incompatible with several DeFi protocols, including Uniswap and Compound. This is because the PAY token used an older open-source implementation of ERC20 which no longer conform to the latest standard.
+
+Thus, we want to upgrade the PAY token to the latest ERC20 standard.
 
 ## How it works
+
+[Wrapped Tokens](https://yos.io/2019/07/13/smart-contract-extensibility-wrapped-tokens/) is a smart contract design pattern where you ‘wrap’ or ‘transform’ an existing crypto asset or Token (ETH, ERC20, BTC) into a new Wrapped Token with additional functionality. In our case, we want to extend PAY with the latest ERC20 functions through a new wPAY token.
+
+![]()
+
+The translation between Token and Wrapped Token is often reversible; users can transform between the two versions at any time. The wrapping process usually involves users locking their Tokens in a smart contract, which then mints an equivalent amount of Wrapped Tokens for the user. Users can trade their Wrapped Tokens to the smart contract to receive their original Tokens back.
+
+### Wrapping ETH
+
+One real-life example of a Wrapped Token is WETH.
+
+Because decentralized platforms running on Ethereum use smart contracts to facilitate trades directly between users, every user needs to have the same standardized format for every token they trade. This format is ERC-20.
+
+Ether or ETH is the native currency built on the Ethereum blockchain. ETH doesn’t conform to the ERC-20 standard. It was built before the ERC20 standard existed. WETH is wrapped Ether that supports the ERC20 interface. With WETH, you are able to trade ETH for other ERC20 tokens on exchanges and DApps.
+
+Here’s the interface of a WETH smart contract:
+
+```
+contract IWETH is ERC20 {
+  event Deposit(address indexed sender, uint256 amount);
+  event Withdrawal(address indexed recipient, uint256 amount);
+
+  function deposit() public payable;
+  function withdraw(uint256 amount) public;
+  function withdraw(uint256 amount, address user) public;
+}
+```
+
+When you “wrap” ETH, you’re trading it a smart contract for an equal token called WETH. If you want to get plain ETH back you need to “unwrap” it by trading it back for plain ETH. ETH and WETH are always exchanged at a 1:1 ratio. The Ether collateral is securely locked within the smart contract until it’s traded for WETH at some point in the future.
+
+### Wrapping ERC20
 
 TODO
 
