@@ -12,17 +12,18 @@ contract WrappedERC20Factory {
 
   event WrappedTokenCreated(address originalToken, address wrappedToken, string symbol);
   event ExchangeCreated(address originalToken, address exchange, string symbol);
+  event ExchangeInitialized(address exchange, address caller);
 
   mapping(IERC20 => IERC20) public wrappedTokens; // Mapping of token address -> wrapped token address
   mapping(IERC20 => IExchange) public exchanges; // Mapping of token address -> exchange address
 
   function create(IERC20 _token) public {
+    // Get name, symbol, and decimals directly from _token, via ERC20Detailed
     IERC20Metadata m = IERC20Metadata(_token)
-    // TODO: get name, symbol, and decimals directly from _token, via ERC20Detailed
-
     string wrappedName = string(abi.encodePacked("Wrapped", " ", m.name());
     string wrappedSymbol = string(abi.encodePacked("w", m.symbol()); // e.g. wPAY
 
+    // Deploy Wrapped Token contract
     IERC20 wrappedToken = new WrappedERC20(
       wrappedName,
       wrappedSymbol,
@@ -31,12 +32,20 @@ contract WrappedERC20Factory {
     wrappedTokens[_token] = wrappedToken;
     emit WrappedTokenCreated(_token, wrappedToken, wrappedSymbol);
 
+    // Deploy Token <> Wrapped Token Exchange contract
     IExchange exchange = new WrappedERC20Exchange(
       _token,
       wrappedToken,
     )
     exchanges[_token] = exchange;
     emit ExchangeCreated(_token, exchange, wrappedSymbol);
+
+    // TODO: handover roles
+    // wrappedToken.addMinter(exchange);
+    // wrappedToken.renounceMinter();
+    // wrappedToken.addBurner(exchange);
+    // wrappedToken.renounceBurner();
+    emit ExchangeInitialized(exchange, msg.sender)
     
     // TODO: Checks-Effects-Interactions ok?
   }
