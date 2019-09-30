@@ -27,6 +27,9 @@ contract("WrappedERC20Exchange", () => {
       this.token.address,
       this.wrappedToken.address,
     );
+
+
+    // TODO: setup by minting some PAY to exchange for wPAY
   });
 
   it('should initialize correctly', async () => {
@@ -35,9 +38,15 @@ contract("WrappedERC20Exchange", () => {
 
     const wrappedToken = await this.exchange.wrappedToken();
     assert.equal(wrappedToken, this.wrappedToken.address);
+
+    // TODO: verify PAY balance
   });
 
-  // TODO: test despoti()
-
-  // TODO: test withdraw()
+  it.skip('can deposit', async () => {
+    // TODO
+  });
+  
+  it.skip('can withdraw', async () => {
+    // TODO
+  });
 });

@@ -3,8 +3,8 @@ pragma solidity 0.5.11;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+import "./interfaces/IERC20MintableBurnable.sol";
 import "./interfaces/IExchange.sol";
-import "./WrappedERC20.sol";
 
 
 /**
@@ -17,9 +17,9 @@ contract WrappedERC20Exchange is IExchange {
   event Withdrawn(address payee, uint amount);
 
   IERC20 public token;
-  WrappedERC20 public wrappedToken;
+  IERC20MintableBurnable public wrappedToken;
 
-  constructor (IERC20 _token, WrappedERC20 _wrappedToken) public {
+  constructor (IERC20 _token, IERC20MintableBurnable _wrappedToken) public {
     token = _token;
     wrappedToken = _wrappedToken;
   }
