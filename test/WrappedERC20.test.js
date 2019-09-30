@@ -2,7 +2,7 @@ const { assertEvent } = require('./helpers');
 
 const WrappedERC20 = artifacts.require("WrappedERC20");
 
-const TOKEN_NAME = 'Wrapped PAY';
+const TOKEN_NAME = 'Wrapped PAY Token';
 const TOKEN_SYMBOL = 'wPAY';
 const TOKEN_DECIMALS = 18;
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';

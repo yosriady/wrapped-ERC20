@@ -11,9 +11,8 @@ import "./WrappedERC20Exchange.sol";
 contract WrappedERC20Factory {
   using SafeERC20 for IERC20;
 
-  event WrappedTokenCreated(address originalToken, address wrappedToken, string symbol);
-  event ExchangeCreated(address originalToken, address exchange, string symbol);
-  event ExchangeInitialized(address exchange, address caller);
+  event WrappedTokenCreated(address collateral, address wrappedToken);
+  event ExchangeCreated(address collateral, address exchange);
 
   mapping(address => WrappedERC20) public wrappedTokens; // Mapping of token address -> wrapped token address
   mapping(address => IExchange) public exchanges; // Mapping of token address -> exchange address
@@ -31,7 +30,7 @@ contract WrappedERC20Factory {
       uint8(m.decimals()) // Conversion from old uint256 decimals to new uint8
     );
     wrappedTokens[address(_token)] = wrappedToken;
-    emit WrappedTokenCreated(address(_token), address(wrappedToken), wrappedSymbol);
+    emit WrappedTokenCreated(address(_token), address(wrappedToken));
 
     // Deploy Token <> Wrapped Token Exchange contract
     IExchange exchange = new WrappedERC20Exchange(
@@ -39,13 +38,11 @@ contract WrappedERC20Factory {
       wrappedToken
     );
     exchanges[address(_token)] = exchange;
-    emit ExchangeCreated(address(_token), address(exchange), wrappedSymbol);
+    emit ExchangeCreated(address(_token), address(exchange));
 
     // Handover ERC20Mintable mint permissions from deployer to Exchange contract
     MinterRole mintable = MinterRole(address(wrappedToken));
     mintable.addMinter(address(exchange));
     mintable.renounceMinter();
-
-    emit ExchangeInitialized(address(exchange), msg.sender);
   }
 }
