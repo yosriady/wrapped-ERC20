@@ -15,7 +15,7 @@ contract WrappedERC20Factory {
   event ExchangeCreated(address originalToken, address exchange, string symbol);
   event ExchangeInitialized(address exchange, address caller);
 
-  mapping(address => IERC20) public wrappedTokens; // Mapping of token address -> wrapped token address
+  mapping(address => WrappedERC20) public wrappedTokens; // Mapping of token address -> wrapped token address
   mapping(address => IExchange) public exchanges; // Mapping of token address -> exchange address
 
   function create(IERC20 _token) public {
@@ -25,7 +25,7 @@ contract WrappedERC20Factory {
     string memory wrappedSymbol = string(abi.encodePacked("w", m.symbol())); // e.g. wPAY
 
     // Deploy Wrapped Token contract
-    IERC20 wrappedToken = new WrappedERC20(
+    WrappedERC20 wrappedToken = new WrappedERC20(
       wrappedName,
       wrappedSymbol,
       uint8(m.decimals()) // Conversion from old uint256 decimals to new uint8

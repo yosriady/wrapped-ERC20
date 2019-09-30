@@ -4,7 +4,12 @@ pragma solidity 0.5.11;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "./interfaces/IExchange.sol";
+import "./WrappedERC20.sol";
 
+
+/**
+ * @dev Automated market maker to deposit ERC20 tokens and withdraw wrapped ERC20 tokens against.
+*/
 contract WrappedERC20Exchange is IExchange {
   using SafeERC20 for IERC20;
 
@@ -12,25 +17,29 @@ contract WrappedERC20Exchange is IExchange {
   event Withdrawn(address payee, uint amount);
 
   IERC20 public token;
-  IERC20 public wrappedToken;
+  WrappedERC20 public wrappedToken;
 
-  // TODO: automated market maker to deposit tokens and withdraw wrapped tokens against
-
-  constructor (IERC20 _token, IERC20 _wrappedToken) public {
+  constructor (IERC20 _token, WrappedERC20 _wrappedToken) public {
     token = _token;
     wrappedToken = _wrappedToken;
   }
 
-    function deposit(uint _amount) public {
-        token.transferFrom(msg.sender, address(this), _amount);
-        emit Deposited(msg.sender, _amount);
-        // TODO: wrappedToken.mint()
-    }
+  function deposit(uint _amount) public {
+      emit Deposited(msg.sender, _amount);
 
-    function withdraw(uint _amount) public {
-        require(token.balanceOf(msg.sender) >= _amount, 'Cannot withdraw more than balance.');
-        token.transfer(msg.sender, _amount);
-        emit Withdrawn(msg.sender, _amount);
-        // TODO: wrappedToken.burn()
-    }
+      // msg.sender must have sufficient token allowance for address(this) to transferFrom
+      token.transferFrom(msg.sender, address(this), _amount);
+
+      // Mint an equivalent amount of wrapped token for each token
+      wrappedToken.mint(msg.sender, _amount);
+  }
+
+  function withdraw(uint _amount) public {
+      emit Withdrawn(msg.sender, _amount);
+
+      token.transfer(msg.sender, _amount);
+
+      // msg.sender must have approved sufficient wrappedToken allowance for address(this) to burn
+      wrappedToken.burnFrom(msg.sender, _amount);
+  }
 }
