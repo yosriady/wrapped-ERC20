@@ -28,7 +28,7 @@ contract WrappedERC20Exchange is IExchange {
       emit Deposited(msg.sender, _amount);
 
       // msg.sender must have sufficient token allowance for address(this) to transferFrom
-      token.transferFrom(msg.sender, address(this), _amount);
+      token.safeTransferFrom(msg.sender, address(this), _amount);
 
       // Mint an equivalent amount of wrapped token for each token
       wrappedToken.mint(msg.sender, _amount);
@@ -37,9 +37,10 @@ contract WrappedERC20Exchange is IExchange {
   function withdraw(uint _amount) public {
       emit Withdrawn(msg.sender, _amount);
 
-      token.transfer(msg.sender, _amount);
-
       // msg.sender must have approved sufficient wrappedToken allowance for address(this) to burn
       wrappedToken.burnFrom(msg.sender, _amount);
+
+      // Release token to sender
+      token.safeTransfer(msg.sender, _amount);
   }
 }
