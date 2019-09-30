@@ -1,12 +1,15 @@
 pragma solidity 0.5.11;
 
 
-import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "./interfaces/IExchange.sol";
 
 contract WrappedERC20Exchange is IExchange {
   using SafeERC20 for IERC20;
+
+  event Deposited(address payee, uint amount);
+  event Withdrawn(address payee, uint amount);
 
   IERC20 public token;
   IERC20 public wrappedToken;
@@ -18,18 +21,16 @@ contract WrappedERC20Exchange is IExchange {
     wrappedToken = _wrappedToken;
   }
 
-    function deposit(uint256 _amount) public {
+    function deposit(uint _amount) public {
         token.transferFrom(msg.sender, address(this), _amount);
-        balanceOf[msg.sender] = balanceOf[msg.sender].add(_amount);
-        emit Deposit(msg.sender, _amount);
+        emit Deposited(msg.sender, _amount);
         // TODO: wrappedToken.mint()
     }
 
-    function withdraw(uint256 _amount) public {
-        require(balanceOf[msg.sender] >= _amount);
-        balanceOf[msg.sender] = balanceOf[msg.sender].sub(_amount);
+    function withdraw(uint _amount) public {
+        require(token.balanceOf(msg.sender) >= _amount, 'Cannot withdraw more than balance.');
         token.transfer(msg.sender, _amount);
-        emit Withdrawal(msg.sender, _amount);
+        emit Withdrawn(msg.sender, _amount);
         // TODO: wrappedToken.burn()
     }
 }
