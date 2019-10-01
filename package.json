@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "verify": "truffle run verify",
     "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
     "ethlint": "solium -d contracts/",
     "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol"
@@ -30,6 +31,8 @@
     "prettier-plugin-solidity": "^1.0.0-alpha.27",
     "solhint": "^2.1.0",
     "solhint-plugin-prettier": "0.0.3",
-    "truffle-hdwallet-provider": "^1.0.11"
+    "truffle-error": "0.0.5",
+    "truffle-hdwallet-provider": "^1.0.11",
+    "truffle-security": "^1.5.5"
   }
 }
