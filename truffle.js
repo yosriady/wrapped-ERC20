@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const path = require("path");
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const RINKEBY_ENDPOINT = `https://rinkeby.infura.io/v3/${process.env.INFURA_ACCESS_TOKEN}`;

@@ -1,0 +1,7 @@
+{
+  "networks": {
+    "rinkeby": {
+      "WrappedERC20Factory": "0x8c578bd37465d68474bbb968b2757d377d347a8d"
+    }
+  }
+}
