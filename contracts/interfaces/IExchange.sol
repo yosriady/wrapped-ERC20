@@ -1,7 +1,11 @@
 pragma solidity 0.5.11;
 
 interface IExchange {
-    // TODO: events, getters
+    event Deposited(address payee, uint amount);
+    event Withdrawn(address payee, uint amount);
+
     function deposit(uint256 _amount) external;
     function withdraw(uint256 _amount) external;
+    function token() external view returns (address);
+    function wrappedToken() external view returns (address);
 }

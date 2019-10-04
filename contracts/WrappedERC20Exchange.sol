@@ -24,6 +24,11 @@ contract WrappedERC20Exchange is IExchange {
         wrappedToken = _wrappedToken;
     }
 
+    /**
+    * @dev Wraps a specified amount of tokens into their wrapped counterpart.
+    * Caller must have approved _amount allowance of tokens for this exchange contract address to wrap.
+    * @param _amount Amount of tokens to wrap.
+    */
     function deposit(uint _amount) public {
         emit Deposited(msg.sender, _amount);
 
@@ -34,6 +39,11 @@ contract WrappedERC20Exchange is IExchange {
         wrappedToken.mint(msg.sender, _amount);
     }
 
+    /**
+    * @dev Unwraps a specified amount of wrapped tokens into their original collateral.
+    * Caller must have approved _amount allowance of wrapped tokens for this exchange contract address to unwrap.
+    * @param _amount Amount of tokens to unwrap.
+    */
     function withdraw(uint _amount) public {
         emit Withdrawn(msg.sender, _amount);
 
