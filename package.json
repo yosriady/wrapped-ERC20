@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "test": "truffle test",
     "verify": "truffle run verify",
     "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
     "ethlint": "solium -d contracts/",

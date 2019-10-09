@@ -1,0 +1,352 @@
+{
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    },
+    "updatedAt": "2019-10-01T08:37:04.899Z",
+    "sources": {
+        "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol": {
+            "contracts": [
+                {
+                    "contractName": "IExchange",
+                    "bytecode": "0x",
+                    "deployedBytecode": "0x",
+                    "sourceMap": "",
+                    "deployedSourceMap": ""
+                }
+            ],
+            "ast": {
+                "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol",
+                "exportedSymbols": {
+                    "IExchange": [
+                        12
+                    ]
+                },
+                "id": 13,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            "0.5",
+                            ".11"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "interface",
+                        "documentation": null,
+                        "fullyImplemented": false,
+                        "id": 12,
+                        "linearizedBaseContracts": [
+                            12
+                        ],
+                        "name": "IExchange",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 6,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "deposit",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 4,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 3,
+                                            "name": "_amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 6,
+                                            "src": "97:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 2,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "97:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "96:17:0"
+                                },
+                                "returnParameters": {
+                                    "id": 5,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "122:0:0"
+                                },
+                                "scope": 12,
+                                "src": "80:43:0",
+                                "stateMutability": "nonpayable",
+                                "superFunction": null,
+                                "visibility": "external"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 11,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "withdraw",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 9,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 8,
+                                            "name": "_amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 11,
+                                            "src": "146:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 7,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "146:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "145:17:0"
+                                },
+                                "returnParameters": {
+                                    "id": 10,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "171:0:0"
+                                },
+                                "scope": 12,
+                                "src": "128:44:0",
+                                "stateMutability": "nonpayable",
+                                "superFunction": null,
+                                "visibility": "external"
+                            }
+                        ],
+                        "scope": 13,
+                        "src": "25:149:0"
+                    }
+                ],
+                "src": "0:175:0"
+            },
+            "legacyAST": {
+                "attributes": {
+                    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol",
+                    "exportedSymbols": {
+                        "IExchange": [
+                            12
+                        ]
+                    }
+                },
+                "children": [
+                    {
+                        "attributes": {
+                            "literals": [
+                                "solidity",
+                                "0.5",
+                                ".11"
+                            ]
+                        },
+                        "id": 1,
+                        "name": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "attributes": {
+                            "baseContracts": [
+                                null
+                            ],
+                            "contractDependencies": [
+                                null
+                            ],
+                            "contractKind": "interface",
+                            "documentation": null,
+                            "fullyImplemented": false,
+                            "linearizedBaseContracts": [
+                                12
+                            ],
+                            "name": "IExchange",
+                            "scope": 13
+                        },
+                        "children": [
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "deposit",
+                                    "scope": 12,
+                                    "stateMutability": "nonpayable",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "_amount",
+                                                    "scope": 6,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 2,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "97:7:0"
+                                                    }
+                                                ],
+                                                "id": 3,
+                                                "name": "VariableDeclaration",
+                                                "src": "97:15:0"
+                                            }
+                                        ],
+                                        "id": 4,
+                                        "name": "ParameterList",
+                                        "src": "96:17:0"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 5,
+                                        "name": "ParameterList",
+                                        "src": "122:0:0"
+                                    }
+                                ],
+                                "id": 6,
+                                "name": "FunctionDefinition",
+                                "src": "80:43:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "withdraw",
+                                    "scope": 12,
+                                    "stateMutability": "nonpayable",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "_amount",
+                                                    "scope": 11,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 7,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "146:7:0"
+                                                    }
+                                                ],
+                                                "id": 8,
+                                                "name": "VariableDeclaration",
+                                                "src": "146:15:0"
+                                            }
+                                        ],
+                                        "id": 9,
+                                        "name": "ParameterList",
+                                        "src": "145:17:0"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 10,
+                                        "name": "ParameterList",
+                                        "src": "171:0:0"
+                                    }
+                                ],
+                                "id": 11,
+                                "name": "FunctionDefinition",
+                                "src": "128:44:0"
+                            }
+                        ],
+                        "id": 12,
+                        "name": "ContractDefinition",
+                        "src": "25:149:0"
+                    }
+                ],
+                "id": 13,
+                "name": "SourceUnit",
+                "src": "0:175:0"
+            },
+            "id": 0,
+            "source": "pragma solidity 0.5.11;\n\ninterface IExchange {\n    // TODO: events, getters\n    function deposit(uint256 _amount) external;\n    function withdraw(uint256 _amount) external;\n}\n"
+        }
+    }
+}

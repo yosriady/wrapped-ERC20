@@ -1,0 +1,472 @@
+{
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    },
+    "updatedAt": "2019-10-01T08:37:04.820Z",
+    "sources": {
+        "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20Detailed.sol": {
+            "contracts": [
+                {
+                    "contractName": "IERC20Detailed",
+                    "bytecode": "0x",
+                    "deployedBytecode": "0x",
+                    "sourceMap": "",
+                    "deployedSourceMap": ""
+                }
+            ],
+            "ast": {
+                "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20Detailed.sol",
+                "exportedSymbols": {
+                    "IERC20Detailed": [
+                        17
+                    ]
+                },
+                "id": 18,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            "0.5",
+                            ".11"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "interface",
+                        "documentation": null,
+                        "fullyImplemented": false,
+                        "id": 17,
+                        "linearizedBaseContracts": [
+                            17
+                        ],
+                        "name": "IERC20Detailed",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 6,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "name",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 2,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "69:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 5,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 4,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 6,
+                                            "src": "95:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string"
+                                            },
+                                            "typeName": {
+                                                "id": 3,
+                                                "name": "string",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "95:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_storage_ptr",
+                                                    "typeString": "string"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "94:15:0"
+                                },
+                                "scope": 17,
+                                "src": "56:54:0",
+                                "stateMutability": "view",
+                                "superFunction": null,
+                                "visibility": "external"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 11,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "symbol",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 7,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "130:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 10,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 9,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 11,
+                                            "src": "156:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string"
+                                            },
+                                            "typeName": {
+                                                "id": 8,
+                                                "name": "string",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "156:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_storage_ptr",
+                                                    "typeString": "string"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "155:15:0"
+                                },
+                                "scope": 17,
+                                "src": "115:56:0",
+                                "stateMutability": "view",
+                                "superFunction": null,
+                                "visibility": "external"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 16,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "decimals",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 12,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "193:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 15,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 14,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 16,
+                                            "src": "219:7:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 13,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "219:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "218:9:0"
+                                },
+                                "scope": 17,
+                                "src": "176:52:0",
+                                "stateMutability": "view",
+                                "superFunction": null,
+                                "visibility": "external"
+                            }
+                        ],
+                        "scope": 18,
+                        "src": "25:205:0"
+                    }
+                ],
+                "src": "0:231:0"
+            },
+            "legacyAST": {
+                "attributes": {
+                    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20Detailed.sol",
+                    "exportedSymbols": {
+                        "IERC20Detailed": [
+                            17
+                        ]
+                    }
+                },
+                "children": [
+                    {
+                        "attributes": {
+                            "literals": [
+                                "solidity",
+                                "0.5",
+                                ".11"
+                            ]
+                        },
+                        "id": 1,
+                        "name": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "attributes": {
+                            "baseContracts": [
+                                null
+                            ],
+                            "contractDependencies": [
+                                null
+                            ],
+                            "contractKind": "interface",
+                            "documentation": null,
+                            "fullyImplemented": false,
+                            "linearizedBaseContracts": [
+                                17
+                            ],
+                            "name": "IERC20Detailed",
+                            "scope": 18
+                        },
+                        "children": [
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "name",
+                                    "scope": 17,
+                                    "stateMutability": "view",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 2,
+                                        "name": "ParameterList",
+                                        "src": "69:2:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 6,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "memory",
+                                                    "type": "string",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "string",
+                                                            "type": "string"
+                                                        },
+                                                        "id": 3,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "95:6:0"
+                                                    }
+                                                ],
+                                                "id": 4,
+                                                "name": "VariableDeclaration",
+                                                "src": "95:13:0"
+                                            }
+                                        ],
+                                        "id": 5,
+                                        "name": "ParameterList",
+                                        "src": "94:15:0"
+                                    }
+                                ],
+                                "id": 6,
+                                "name": "FunctionDefinition",
+                                "src": "56:54:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "symbol",
+                                    "scope": 17,
+                                    "stateMutability": "view",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 7,
+                                        "name": "ParameterList",
+                                        "src": "130:2:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 11,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "memory",
+                                                    "type": "string",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "string",
+                                                            "type": "string"
+                                                        },
+                                                        "id": 8,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "156:6:0"
+                                                    }
+                                                ],
+                                                "id": 9,
+                                                "name": "VariableDeclaration",
+                                                "src": "156:13:0"
+                                            }
+                                        ],
+                                        "id": 10,
+                                        "name": "ParameterList",
+                                        "src": "155:15:0"
+                                    }
+                                ],
+                                "id": 11,
+                                "name": "FunctionDefinition",
+                                "src": "115:56:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "decimals",
+                                    "scope": 17,
+                                    "stateMutability": "view",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 12,
+                                        "name": "ParameterList",
+                                        "src": "193:2:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 16,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 13,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "219:7:0"
+                                                    }
+                                                ],
+                                                "id": 14,
+                                                "name": "VariableDeclaration",
+                                                "src": "219:7:0"
+                                            }
+                                        ],
+                                        "id": 15,
+                                        "name": "ParameterList",
+                                        "src": "218:9:0"
+                                    }
+                                ],
+                                "id": 16,
+                                "name": "FunctionDefinition",
+                                "src": "176:52:0"
+                            }
+                        ],
+                        "id": 17,
+                        "name": "ContractDefinition",
+                        "src": "25:205:0"
+                    }
+                ],
+                "id": 18,
+                "name": "SourceUnit",
+                "src": "0:231:0"
+            },
+            "id": 0,
+            "source": "pragma solidity 0.5.11;\n\ninterface IERC20Detailed {\n    function name() external view returns (string memory);\n    function symbol() external view returns (string memory);\n    function decimals() external view returns (uint256);\n}\n"
+        }
+    }
+}

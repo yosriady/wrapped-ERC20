@@ -1,0 +1,603 @@
+{
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    },
+    "updatedAt": "2019-10-01T08:37:06.029Z",
+    "sources": {
+        "/Users/yos/work/wrapped-ERC20/contracts/SimpleStorage.sol": {
+            "contracts": [
+                {
+                    "contractName": "SimpleStorage",
+                    "bytecode": "0x608060405234801561001057600080fd5b5061010e806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a723158209fc3a68635ada901d3fd7c779a06f9795a5ad6bed2ff333e3cc763ba9292a65e64736f6c634300050b0032",
+                    "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a723158209fc3a68635ada901d3fd7c779a06f9795a5ad6bed2ff333e3cc763ba9292a65e64736f6c634300050b0032",
+                    "sourceMap": "25:220:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:220:0;;;;;;;",
+                    "deployedSourceMap": "25:220:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:220:0;;;;;;;;;;;;;;;;;;;;;;;;94:25;;;:::i;:::-;;;;;;;;;;;;;;;;126:117;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;126:117:0;;:::i;:::-;;94:25;;;;:::o;126:117::-;167:10;:14;;;197:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;126:117;:::o"
+                }
+            ],
+            "ast": {
+                "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/SimpleStorage.sol",
+                "exportedSymbols": {
+                    "SimpleStorage": [
+                        22
+                    ]
+                },
+                "id": 23,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            "0.5",
+                            ".11"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "contract",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 22,
+                        "linearizedBaseContracts": [
+                            22
+                        ],
+                        "name": "SimpleStorage",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "anonymous": false,
+                                "documentation": null,
+                                "id": 5,
+                                "name": "StorageSet",
+                                "nodeType": "EventDefinition",
+                                "parameters": {
+                                    "id": 4,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 3,
+                                            "indexed": false,
+                                            "name": "_message",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 5,
+                                            "src": "71:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string"
+                                            },
+                                            "typeName": {
+                                                "id": 2,
+                                                "name": "string",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "71:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_storage_ptr",
+                                                    "typeString": "string"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "70:17:0"
+                                },
+                                "src": "54:34:0"
+                            },
+                            {
+                                "constant": false,
+                                "id": 7,
+                                "name": "storedData",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 22,
+                                "src": "94:25:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 6,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "94:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 20,
+                                    "nodeType": "Block",
+                                    "src": "157:86:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 14,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 12,
+                                                    "name": "storedData",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 7,
+                                                    "src": "167:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 13,
+                                                    "name": "x",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 9,
+                                                    "src": "180:1:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "167:14:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "id": 15,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "167:14:0"
+                                        },
+                                        {
+                                            "eventCall": {
+                                                "argumentTypes": null,
+                                                "arguments": [
+                                                    {
+                                                        "argumentTypes": null,
+                                                        "hexValue": "446174612073746f726564207375636365737366756c6c7921",
+                                                        "id": 17,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "string",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "208:27:0",
+                                                        "subdenomination": null,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
+                                                            "typeString": "literal_string \"Data stored successfully!\""
+                                                        },
+                                                        "value": "Data stored successfully!"
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
+                                                            "typeString": "literal_string \"Data stored successfully!\""
+                                                        }
+                                                    ],
+                                                    "id": 16,
+                                                    "name": "StorageSet",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 5,
+                                                    "src": "197:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                                                        "typeString": "function (string memory)"
+                                                    }
+                                                },
+                                                "id": 18,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "kind": "functionCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "197:39:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_tuple$__$",
+                                                    "typeString": "tuple()"
+                                                }
+                                            },
+                                            "id": 19,
+                                            "nodeType": "EmitStatement",
+                                            "src": "192:44:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "id": 21,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "set",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 10,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 9,
+                                            "name": "x",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 21,
+                                            "src": "139:9:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 8,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "139:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "138:11:0"
+                                },
+                                "returnParameters": {
+                                    "id": 11,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "157:0:0"
+                                },
+                                "scope": 22,
+                                "src": "126:117:0",
+                                "stateMutability": "nonpayable",
+                                "superFunction": null,
+                                "visibility": "public"
+                            }
+                        ],
+                        "scope": 23,
+                        "src": "25:220:0"
+                    }
+                ],
+                "src": "0:246:0"
+            },
+            "legacyAST": {
+                "attributes": {
+                    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/SimpleStorage.sol",
+                    "exportedSymbols": {
+                        "SimpleStorage": [
+                            22
+                        ]
+                    }
+                },
+                "children": [
+                    {
+                        "attributes": {
+                            "literals": [
+                                "solidity",
+                                "0.5",
+                                ".11"
+                            ]
+                        },
+                        "id": 1,
+                        "name": "PragmaDirective",
+                        "src": "0:23:0"
+                    },
+                    {
+                        "attributes": {
+                            "baseContracts": [
+                                null
+                            ],
+                            "contractDependencies": [
+                                null
+                            ],
+                            "contractKind": "contract",
+                            "documentation": null,
+                            "fullyImplemented": true,
+                            "linearizedBaseContracts": [
+                                22
+                            ],
+                            "name": "SimpleStorage",
+                            "scope": 23
+                        },
+                        "children": [
+                            {
+                                "attributes": {
+                                    "anonymous": false,
+                                    "documentation": null,
+                                    "name": "StorageSet"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "indexed": false,
+                                                    "name": "_message",
+                                                    "scope": 5,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "string",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "string",
+                                                            "type": "string"
+                                                        },
+                                                        "id": 2,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "71:6:0"
+                                                    }
+                                                ],
+                                                "id": 3,
+                                                "name": "VariableDeclaration",
+                                                "src": "71:15:0"
+                                            }
+                                        ],
+                                        "id": 4,
+                                        "name": "ParameterList",
+                                        "src": "70:17:0"
+                                    }
+                                ],
+                                "id": 5,
+                                "name": "EventDefinition",
+                                "src": "54:34:0"
+                            },
+                            {
+                                "attributes": {
+                                    "constant": false,
+                                    "name": "storedData",
+                                    "scope": 22,
+                                    "stateVariable": true,
+                                    "storageLocation": "default",
+                                    "type": "uint256",
+                                    "value": null,
+                                    "visibility": "public"
+                                },
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "name": "uint256",
+                                            "type": "uint256"
+                                        },
+                                        "id": 6,
+                                        "name": "ElementaryTypeName",
+                                        "src": "94:7:0"
+                                    }
+                                ],
+                                "id": 7,
+                                "name": "VariableDeclaration",
+                                "src": "94:25:0"
+                            },
+                            {
+                                "attributes": {
+                                    "documentation": null,
+                                    "implemented": true,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "set",
+                                    "scope": 22,
+                                    "stateMutability": "nonpayable",
+                                    "superFunction": null,
+                                    "visibility": "public"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "x",
+                                                    "scope": 21,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 8,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "139:7:0"
+                                                    }
+                                                ],
+                                                "id": 9,
+                                                "name": "VariableDeclaration",
+                                                "src": "139:9:0"
+                                            }
+                                        ],
+                                        "id": 10,
+                                        "name": "ParameterList",
+                                        "src": "138:11:0"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 11,
+                                        "name": "ParameterList",
+                                        "src": "157:0:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "argumentTypes": null,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "operator": "=",
+                                                            "type": "uint256"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "attributes": {
+                                                                    "argumentTypes": null,
+                                                                    "overloadedDeclarations": [
+                                                                        null
+                                                                    ],
+                                                                    "referencedDeclaration": 7,
+                                                                    "type": "uint256",
+                                                                    "value": "storedData"
+                                                                },
+                                                                "id": 12,
+                                                                "name": "Identifier",
+                                                                "src": "167:10:0"
+                                                            },
+                                                            {
+                                                                "attributes": {
+                                                                    "argumentTypes": null,
+                                                                    "overloadedDeclarations": [
+                                                                        null
+                                                                    ],
+                                                                    "referencedDeclaration": 9,
+                                                                    "type": "uint256",
+                                                                    "value": "x"
+                                                                },
+                                                                "id": 13,
+                                                                "name": "Identifier",
+                                                                "src": "180:1:0"
+                                                            }
+                                                        ],
+                                                        "id": 14,
+                                                        "name": "Assignment",
+                                                        "src": "167:14:0"
+                                                    }
+                                                ],
+                                                "id": 15,
+                                                "name": "ExpressionStatement",
+                                                "src": "167:14:0"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "argumentTypes": null,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "isStructConstructorCall": false,
+                                                            "lValueRequested": false,
+                                                            "names": [
+                                                                null
+                                                            ],
+                                                            "type": "tuple()",
+                                                            "type_conversion": false
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "attributes": {
+                                                                    "argumentTypes": [
+                                                                        {
+                                                                            "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
+                                                                            "typeString": "literal_string \"Data stored successfully!\""
+                                                                        }
+                                                                    ],
+                                                                    "overloadedDeclarations": [
+                                                                        null
+                                                                    ],
+                                                                    "referencedDeclaration": 5,
+                                                                    "type": "function (string memory)",
+                                                                    "value": "StorageSet"
+                                                                },
+                                                                "id": 16,
+                                                                "name": "Identifier",
+                                                                "src": "197:10:0"
+                                                            },
+                                                            {
+                                                                "attributes": {
+                                                                    "argumentTypes": null,
+                                                                    "hexvalue": "446174612073746f726564207375636365737366756c6c7921",
+                                                                    "isConstant": false,
+                                                                    "isLValue": false,
+                                                                    "isPure": true,
+                                                                    "lValueRequested": false,
+                                                                    "subdenomination": null,
+                                                                    "token": "string",
+                                                                    "type": "literal_string \"Data stored successfully!\"",
+                                                                    "value": "Data stored successfully!"
+                                                                },
+                                                                "id": 17,
+                                                                "name": "Literal",
+                                                                "src": "208:27:0"
+                                                            }
+                                                        ],
+                                                        "id": 18,
+                                                        "name": "FunctionCall",
+                                                        "src": "197:39:0"
+                                                    }
+                                                ],
+                                                "id": 19,
+                                                "name": "EmitStatement",
+                                                "src": "192:44:0"
+                                            }
+                                        ],
+                                        "id": 20,
+                                        "name": "Block",
+                                        "src": "157:86:0"
+                                    }
+                                ],
+                                "id": 21,
+                                "name": "FunctionDefinition",
+                                "src": "126:117:0"
+                            }
+                        ],
+                        "id": 22,
+                        "name": "ContractDefinition",
+                        "src": "25:220:0"
+                    }
+                ],
+                "id": 23,
+                "name": "SourceUnit",
+                "src": "0:246:0"
+            },
+            "id": 0,
+            "source": "pragma solidity 0.5.11;\n\ncontract SimpleStorage {\n    event StorageSet(string _message);\n\n    uint256 public storedData;\n\n    function set(uint256 x) public {\n        storedData = x;\n\n        emit StorageSet(\"Data stored successfully!\");\n    }\n}\n"
+        }
+    }
+}
