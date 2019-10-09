@@ -16,8 +16,8 @@ contract WrappedERC20Factory is IFactory {
     event WrappedTokenCreated(address collateral, address wrappedToken);
     event ExchangeCreated(address collateral, address exchange);
 
-    mapping(address => IERC20MintableBurnable) public wrappedTokens; // Mapping of token address -> wrapped token address
-    mapping(address => IExchange) public exchanges; // Mapping of token address -> exchange address
+    mapping(IERC20 => IERC20MintableBurnable) public wrappedTokens; // Mapping of token address -> wrapped token address
+    mapping(IERC20 => IExchange) public exchanges; // Mapping of token address -> exchange address
 
     /**
     * @dev Deploys a new WrappedERC20 token and automated Exchange contract for a given ERC20 token.
