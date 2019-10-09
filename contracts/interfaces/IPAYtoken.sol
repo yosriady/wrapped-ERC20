@@ -1,4 +1,4 @@
-pragma solidity 0.5.11; // solhint-disable compiler-fixed
+pragma solidity 0.5.11;
 
 interface IPAYToken {
     event Transfer(address indexed from, address indexed to, uint256 value);
