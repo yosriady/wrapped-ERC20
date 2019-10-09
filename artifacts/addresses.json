@@ -1,7 +1,8 @@
 {
   "networks": {
     "rinkeby": {
-      "WrappedERC20Factory": "0x8c578bd37465d68474bbb968b2757d377d347a8d"
+      "SimpleStorage": "0x995624146e5D0E2Ed6f39652f29De930F0F422B6",
+      "WrappedERC20Factory": "0x974C945a1bc9B4F0ABA0325BB8d32241ef52408a"
     }
   }
 }
