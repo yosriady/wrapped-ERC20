@@ -3,7 +3,7 @@
         "name": "solc",
         "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
     },
-    "updatedAt": "2019-10-01T08:37:04.899Z",
+    "updatedAt": "2019-10-09T14:43:58.103Z",
     "sources": {
         "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol": {
             "contracts": [
@@ -19,10 +19,10 @@
                 "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol",
                 "exportedSymbols": {
                     "IExchange": [
-                        12
+                        38
                     ]
                 },
-                "id": 13,
+                "id": 39,
                 "nodeType": "SourceUnit",
                 "nodes": [
                     {
@@ -41,33 +41,59 @@
                         "contractKind": "interface",
                         "documentation": null,
                         "fullyImplemented": false,
-                        "id": 12,
+                        "id": 38,
                         "linearizedBaseContracts": [
-                            12
+                            38
                         ],
                         "name": "IExchange",
                         "nodeType": "ContractDefinition",
                         "nodes": [
                             {
-                                "body": null,
+                                "anonymous": false,
                                 "documentation": null,
-                                "id": 6,
-                                "implemented": false,
-                                "kind": "function",
-                                "modifiers": [],
-                                "name": "deposit",
-                                "nodeType": "FunctionDefinition",
+                                "id": 7,
+                                "name": "Deposited",
+                                "nodeType": "EventDefinition",
                                 "parameters": {
-                                    "id": 4,
+                                    "id": 6,
                                     "nodeType": "ParameterList",
                                     "parameters": [
                                         {
                                             "constant": false,
                                             "id": 3,
-                                            "name": "_amount",
+                                            "indexed": false,
+                                            "name": "payee",
                                             "nodeType": "VariableDeclaration",
-                                            "scope": 6,
-                                            "src": "97:15:0",
+                                            "scope": 7,
+                                            "src": "67:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 2,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "67:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 5,
+                                            "indexed": false,
+                                            "name": "amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 7,
+                                            "src": "82:14:0",
                                             "stateVariable": false,
                                             "storageLocation": "default",
                                             "typeDescriptions": {
@@ -75,10 +101,10 @@
                                                 "typeString": "uint256"
                                             },
                                             "typeName": {
-                                                "id": 2,
+                                                "id": 4,
                                                 "name": "uint256",
                                                 "nodeType": "ElementaryTypeName",
-                                                "src": "97:7:0",
+                                                "src": "82:7:0",
                                                 "typeDescriptions": {
                                                     "typeIdentifier": "t_uint256",
                                                     "typeString": "uint256"
@@ -88,16 +114,157 @@
                                             "visibility": "internal"
                                         }
                                     ],
-                                    "src": "96:17:0"
+                                    "src": "66:31:0"
+                                },
+                                "src": "51:47:0"
+                            },
+                            {
+                                "anonymous": false,
+                                "documentation": null,
+                                "id": 13,
+                                "name": "Withdrawn",
+                                "nodeType": "EventDefinition",
+                                "parameters": {
+                                    "id": 12,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 9,
+                                            "indexed": false,
+                                            "name": "payee",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 13,
+                                            "src": "119:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 8,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "119:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 11,
+                                            "indexed": false,
+                                            "name": "amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 13,
+                                            "src": "134:14:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 10,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "134:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "118:31:0"
+                                },
+                                "src": "103:47:0"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 20,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "deposit",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 16,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 15,
+                                            "name": "_amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 20,
+                                            "src": "173:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 14,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "173:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "172:17:0"
                                 },
                                 "returnParameters": {
-                                    "id": 5,
+                                    "id": 19,
                                     "nodeType": "ParameterList",
-                                    "parameters": [],
-                                    "src": "122:0:0"
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 18,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 20,
+                                            "src": "208:4:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 17,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "208:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "207:6:0"
                                 },
-                                "scope": 12,
-                                "src": "80:43:0",
+                                "scope": 38,
+                                "src": "156:58:0",
                                 "stateMutability": "nonpayable",
                                 "superFunction": null,
                                 "visibility": "external"
@@ -105,23 +272,23 @@
                             {
                                 "body": null,
                                 "documentation": null,
-                                "id": 11,
+                                "id": 27,
                                 "implemented": false,
                                 "kind": "function",
                                 "modifiers": [],
                                 "name": "withdraw",
                                 "nodeType": "FunctionDefinition",
                                 "parameters": {
-                                    "id": 9,
+                                    "id": 23,
                                     "nodeType": "ParameterList",
                                     "parameters": [
                                         {
                                             "constant": false,
-                                            "id": 8,
+                                            "id": 22,
                                             "name": "_amount",
                                             "nodeType": "VariableDeclaration",
-                                            "scope": 11,
-                                            "src": "146:15:0",
+                                            "scope": 27,
+                                            "src": "237:15:0",
                                             "stateVariable": false,
                                             "storageLocation": "default",
                                             "typeDescriptions": {
@@ -129,10 +296,10 @@
                                                 "typeString": "uint256"
                                             },
                                             "typeName": {
-                                                "id": 7,
+                                                "id": 21,
                                                 "name": "uint256",
                                                 "nodeType": "ElementaryTypeName",
-                                                "src": "146:7:0",
+                                                "src": "237:7:0",
                                                 "typeDescriptions": {
                                                     "typeIdentifier": "t_uint256",
                                                     "typeString": "uint256"
@@ -142,33 +309,170 @@
                                             "visibility": "internal"
                                         }
                                     ],
-                                    "src": "145:17:0"
+                                    "src": "236:17:0"
                                 },
                                 "returnParameters": {
-                                    "id": 10,
+                                    "id": 26,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 25,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 27,
+                                            "src": "272:4:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 24,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "272:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "271:6:0"
+                                },
+                                "scope": 38,
+                                "src": "219:59:0",
+                                "stateMutability": "nonpayable",
+                                "superFunction": null,
+                                "visibility": "external"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 32,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "token",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 28,
                                     "nodeType": "ParameterList",
                                     "parameters": [],
-                                    "src": "171:0:0"
+                                    "src": "297:2:0"
                                 },
-                                "scope": 12,
-                                "src": "128:44:0",
-                                "stateMutability": "nonpayable",
+                                "returnParameters": {
+                                    "id": 31,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 30,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 32,
+                                            "src": "323:7:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 29,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "323:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "322:9:0"
+                                },
+                                "scope": 38,
+                                "src": "283:49:0",
+                                "stateMutability": "view",
+                                "superFunction": null,
+                                "visibility": "external"
+                            },
+                            {
+                                "body": null,
+                                "documentation": null,
+                                "id": 37,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "wrappedToken",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 33,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "358:2:0"
+                                },
+                                "returnParameters": {
+                                    "id": 36,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 35,
+                                            "name": "",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 37,
+                                            "src": "384:7:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 34,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "384:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "383:9:0"
+                                },
+                                "scope": 38,
+                                "src": "337:56:0",
+                                "stateMutability": "view",
                                 "superFunction": null,
                                 "visibility": "external"
                             }
                         ],
-                        "scope": 13,
-                        "src": "25:149:0"
+                        "scope": 39,
+                        "src": "25:370:0"
                     }
                 ],
-                "src": "0:175:0"
+                "src": "0:396:0"
             },
             "legacyAST": {
                 "attributes": {
                     "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IExchange.sol",
                     "exportedSymbols": {
                         "IExchange": [
-                            12
+                            38
                         ]
                     }
                 },
@@ -197,27 +501,17 @@
                             "documentation": null,
                             "fullyImplemented": false,
                             "linearizedBaseContracts": [
-                                12
+                                38
                             ],
                             "name": "IExchange",
-                            "scope": 13
+                            "scope": 39
                         },
                         "children": [
                             {
                                 "attributes": {
-                                    "body": null,
+                                    "anonymous": false,
                                     "documentation": null,
-                                    "implemented": false,
-                                    "isConstructor": false,
-                                    "kind": "function",
-                                    "modifiers": [
-                                        null
-                                    ],
-                                    "name": "deposit",
-                                    "scope": 12,
-                                    "stateMutability": "nonpayable",
-                                    "superFunction": null,
-                                    "visibility": "external"
+                                    "name": "Deposited"
                                 },
                                 "children": [
                                     {
@@ -225,8 +519,37 @@
                                             {
                                                 "attributes": {
                                                     "constant": false,
-                                                    "name": "_amount",
-                                                    "scope": 6,
+                                                    "indexed": false,
+                                                    "name": "payee",
+                                                    "scope": 7,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "address",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "address",
+                                                            "stateMutability": "nonpayable",
+                                                            "type": "address"
+                                                        },
+                                                        "id": 2,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "67:7:0"
+                                                    }
+                                                ],
+                                                "id": 3,
+                                                "name": "VariableDeclaration",
+                                                "src": "67:13:0"
+                                            },
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "indexed": false,
+                                                    "name": "amount",
+                                                    "scope": 7,
                                                     "stateVariable": false,
                                                     "storageLocation": "default",
                                                     "type": "uint256",
@@ -239,35 +562,186 @@
                                                             "name": "uint256",
                                                             "type": "uint256"
                                                         },
-                                                        "id": 2,
+                                                        "id": 4,
                                                         "name": "ElementaryTypeName",
-                                                        "src": "97:7:0"
+                                                        "src": "82:7:0"
                                                     }
                                                 ],
-                                                "id": 3,
+                                                "id": 5,
                                                 "name": "VariableDeclaration",
-                                                "src": "97:15:0"
+                                                "src": "82:14:0"
                                             }
                                         ],
-                                        "id": 4,
+                                        "id": 6,
                                         "name": "ParameterList",
-                                        "src": "96:17:0"
-                                    },
-                                    {
-                                        "attributes": {
-                                            "parameters": [
-                                                null
-                                            ]
-                                        },
-                                        "children": [],
-                                        "id": 5,
-                                        "name": "ParameterList",
-                                        "src": "122:0:0"
+                                        "src": "66:31:0"
                                     }
                                 ],
-                                "id": 6,
+                                "id": 7,
+                                "name": "EventDefinition",
+                                "src": "51:47:0"
+                            },
+                            {
+                                "attributes": {
+                                    "anonymous": false,
+                                    "documentation": null,
+                                    "name": "Withdrawn"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "indexed": false,
+                                                    "name": "payee",
+                                                    "scope": 13,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "address",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "address",
+                                                            "stateMutability": "nonpayable",
+                                                            "type": "address"
+                                                        },
+                                                        "id": 8,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "119:7:0"
+                                                    }
+                                                ],
+                                                "id": 9,
+                                                "name": "VariableDeclaration",
+                                                "src": "119:13:0"
+                                            },
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "indexed": false,
+                                                    "name": "amount",
+                                                    "scope": 13,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 10,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "134:7:0"
+                                                    }
+                                                ],
+                                                "id": 11,
+                                                "name": "VariableDeclaration",
+                                                "src": "134:14:0"
+                                            }
+                                        ],
+                                        "id": 12,
+                                        "name": "ParameterList",
+                                        "src": "118:31:0"
+                                    }
+                                ],
+                                "id": 13,
+                                "name": "EventDefinition",
+                                "src": "103:47:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "deposit",
+                                    "scope": 38,
+                                    "stateMutability": "nonpayable",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "_amount",
+                                                    "scope": 20,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "uint256",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "uint256",
+                                                            "type": "uint256"
+                                                        },
+                                                        "id": 14,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "173:7:0"
+                                                    }
+                                                ],
+                                                "id": 15,
+                                                "name": "VariableDeclaration",
+                                                "src": "173:15:0"
+                                            }
+                                        ],
+                                        "id": 16,
+                                        "name": "ParameterList",
+                                        "src": "172:17:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 20,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "bool",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "bool",
+                                                            "type": "bool"
+                                                        },
+                                                        "id": 17,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "208:4:0"
+                                                    }
+                                                ],
+                                                "id": 18,
+                                                "name": "VariableDeclaration",
+                                                "src": "208:4:0"
+                                            }
+                                        ],
+                                        "id": 19,
+                                        "name": "ParameterList",
+                                        "src": "207:6:0"
+                                    }
+                                ],
+                                "id": 20,
                                 "name": "FunctionDefinition",
-                                "src": "80:43:0"
+                                "src": "156:58:0"
                             },
                             {
                                 "attributes": {
@@ -280,7 +754,7 @@
                                         null
                                     ],
                                     "name": "withdraw",
-                                    "scope": 12,
+                                    "scope": 38,
                                     "stateMutability": "nonpayable",
                                     "superFunction": null,
                                     "visibility": "external"
@@ -292,7 +766,7 @@
                                                 "attributes": {
                                                     "constant": false,
                                                     "name": "_amount",
-                                                    "scope": 11,
+                                                    "scope": 27,
                                                     "stateVariable": false,
                                                     "storageLocation": "default",
                                                     "type": "uint256",
@@ -305,20 +779,75 @@
                                                             "name": "uint256",
                                                             "type": "uint256"
                                                         },
-                                                        "id": 7,
+                                                        "id": 21,
                                                         "name": "ElementaryTypeName",
-                                                        "src": "146:7:0"
+                                                        "src": "237:7:0"
                                                     }
                                                 ],
-                                                "id": 8,
+                                                "id": 22,
                                                 "name": "VariableDeclaration",
-                                                "src": "146:15:0"
+                                                "src": "237:15:0"
                                             }
                                         ],
-                                        "id": 9,
+                                        "id": 23,
                                         "name": "ParameterList",
-                                        "src": "145:17:0"
+                                        "src": "236:17:0"
                                     },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 27,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "bool",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "bool",
+                                                            "type": "bool"
+                                                        },
+                                                        "id": 24,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "272:4:0"
+                                                    }
+                                                ],
+                                                "id": 25,
+                                                "name": "VariableDeclaration",
+                                                "src": "272:4:0"
+                                            }
+                                        ],
+                                        "id": 26,
+                                        "name": "ParameterList",
+                                        "src": "271:6:0"
+                                    }
+                                ],
+                                "id": 27,
+                                "name": "FunctionDefinition",
+                                "src": "219:59:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "token",
+                                    "scope": 38,
+                                    "stateMutability": "view",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
                                     {
                                         "attributes": {
                                             "parameters": [
@@ -326,27 +855,128 @@
                                             ]
                                         },
                                         "children": [],
-                                        "id": 10,
+                                        "id": 28,
                                         "name": "ParameterList",
-                                        "src": "171:0:0"
+                                        "src": "297:2:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 32,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "address",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "address",
+                                                            "stateMutability": "nonpayable",
+                                                            "type": "address"
+                                                        },
+                                                        "id": 29,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "323:7:0"
+                                                    }
+                                                ],
+                                                "id": 30,
+                                                "name": "VariableDeclaration",
+                                                "src": "323:7:0"
+                                            }
+                                        ],
+                                        "id": 31,
+                                        "name": "ParameterList",
+                                        "src": "322:9:0"
                                     }
                                 ],
-                                "id": 11,
+                                "id": 32,
                                 "name": "FunctionDefinition",
-                                "src": "128:44:0"
+                                "src": "283:49:0"
+                            },
+                            {
+                                "attributes": {
+                                    "body": null,
+                                    "documentation": null,
+                                    "implemented": false,
+                                    "isConstructor": false,
+                                    "kind": "function",
+                                    "modifiers": [
+                                        null
+                                    ],
+                                    "name": "wrappedToken",
+                                    "scope": 38,
+                                    "stateMutability": "view",
+                                    "superFunction": null,
+                                    "visibility": "external"
+                                },
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "parameters": [
+                                                null
+                                            ]
+                                        },
+                                        "children": [],
+                                        "id": 33,
+                                        "name": "ParameterList",
+                                        "src": "358:2:0"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "constant": false,
+                                                    "name": "",
+                                                    "scope": 37,
+                                                    "stateVariable": false,
+                                                    "storageLocation": "default",
+                                                    "type": "address",
+                                                    "value": null,
+                                                    "visibility": "internal"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "attributes": {
+                                                            "name": "address",
+                                                            "stateMutability": "nonpayable",
+                                                            "type": "address"
+                                                        },
+                                                        "id": 34,
+                                                        "name": "ElementaryTypeName",
+                                                        "src": "384:7:0"
+                                                    }
+                                                ],
+                                                "id": 35,
+                                                "name": "VariableDeclaration",
+                                                "src": "384:7:0"
+                                            }
+                                        ],
+                                        "id": 36,
+                                        "name": "ParameterList",
+                                        "src": "383:9:0"
+                                    }
+                                ],
+                                "id": 37,
+                                "name": "FunctionDefinition",
+                                "src": "337:56:0"
                             }
                         ],
-                        "id": 12,
+                        "id": 38,
                         "name": "ContractDefinition",
-                        "src": "25:149:0"
+                        "src": "25:370:0"
                     }
                 ],
-                "id": 13,
+                "id": 39,
                 "name": "SourceUnit",
-                "src": "0:175:0"
+                "src": "0:396:0"
             },
             "id": 0,
-            "source": "pragma solidity 0.5.11;\n\ninterface IExchange {\n    // TODO: events, getters\n    function deposit(uint256 _amount) external;\n    function withdraw(uint256 _amount) external;\n}\n"
+            "source": "pragma solidity 0.5.11;\n\ninterface IExchange {\n    event Deposited(address payee, uint256 amount);\n    event Withdrawn(address payee, uint256 amount);\n\n    function deposit(uint256 _amount) external returns (bool);\n    function withdraw(uint256 _amount) external returns (bool);\n    function token() external view returns (address);\n    function wrappedToken() external view returns (address);\n}\n"
         }
     }
 }
