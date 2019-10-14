@@ -47,7 +47,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * Caller must have approved _amount allowance of wrapped tokens for this exchange contract address to unwrap.
     * @param _amount Amount of tokens to unwrap.
     */
-    function withdraw(uint _amount) public returns (bool) {
+    function withdraw(uint _amount) public nonReentrant returns (bool) {
         emit Withdrawn(msg.sender, _amount);
 
         // msg.sender must have approved sufficient wrappedToken allowance for address(this) to burn
