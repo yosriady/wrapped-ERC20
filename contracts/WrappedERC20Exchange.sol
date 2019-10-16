@@ -49,7 +49,10 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @param _destination Address to receive wrapped tokens.
     * @param _amount Amount of tokens to wrap.
     */
-    function depositFrom(address _source, address _destination, _amount) public nonReentrant returns (bool) {
+    function depositFrom(address _source, address _destination, uint _amount) public nonReentrant returns (bool) {
+        require(_source != address(0), "Source address cannot be a zero address.");
+        require(_destination != address(0), "Destination address cannot be a zero address.");
+
         emit Deposited(_source, _amount);
 
         // _source address must have sufficient token allowance for address(this) to transferFrom
@@ -86,6 +89,9 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @param _amount Amount of tokens to unwrap.
     */
     function withdrawFrom(address _source, address _destination, uint _amount) public nonReentrant returns (bool) {
+        require(_source != address(0), "Source address cannot be a zero address.");
+        require(_destination != address(0), "Destination address cannot be a zero address.");
+
         emit Withdrawn(_source, _amount);
 
         // _source must have approved sufficient wrappedToken allowance for address(this) to burn
