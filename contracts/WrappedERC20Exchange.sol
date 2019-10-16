@@ -27,7 +27,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
 
     /**
     * @dev Wraps a specified amount of tokens into their wrapped counterpart.
-    * Caller must have approved _amount allowance of tokens for this exchange contract address to wrap.
+    * Caller must have approved _amount allowance of unwrapped tokens for this exchange contract address to wrap.
     * @param _amount Amount of tokens to wrap.
     */
     function deposit(uint _amount) public nonReentrant returns (bool) {
@@ -38,6 +38,25 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
 
         // Mint an equivalent amount of wrapped token for each token
         wrappedToken.mint(msg.sender, _amount);
+
+        return true;
+    }
+
+    /**
+    * @dev Wraps a specified amount of tokens into their wrapped counterpart.
+    * Source must have approved _amount allowance of unwrapped tokens for this exchange contract address to wrap.
+    * @param _source Address holding unwrapped tokens.
+    * @param _destination Address to receive wrapped tokens.
+    * @param _amount Amount of tokens to wrap.
+    */
+    function depositFrom(address _source, address _destination, _amount) public nonReentrant returns (bool) {
+        emit Deposited(_source, _amount);
+
+        // _source address must have sufficient token allowance for address(this) to transferFrom
+        token.safeTransferFrom(_source, address(this), _amount);
+
+        // Mint an equivalent amount of wrapped token for each token
+        wrappedToken.mint(_destination, _amount);
 
         return true;
     }
@@ -58,4 +77,23 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
 
         return true;
     }
+
+    /**
+    * @dev Unwraps a specified amount of wrapped tokens into their original collateral.
+    * Source must have approved _amount allowance of wrapped tokens for this exchange contract address to unwrap.
+    * @param _source Address holding wrapped tokens.
+    * @param _destination Address to receive unwrapped tokens.
+    * @param _amount Amount of tokens to unwrap.
+    */
+    function withdrawFrom(address _source, address _destination, uint _amount) public nonReentrant returns (bool) {
+        emit Withdrawn(_source, _amount);
+
+        // _source must have approved sufficient wrappedToken allowance for address(this) to burn
+        wrappedToken.burnFrom(_source, _amount);
+
+        // Release token to destination
+        token.safeTransfer(_destination, _amount);
+
+        return true;
+    }    
 }
