@@ -29,6 +29,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @dev Wraps a specified amount of tokens into their wrapped counterpart.
     * Caller must have approved _amount allowance of unwrapped tokens for this exchange contract address to wrap.
     * @param _amount Amount of tokens to wrap.
+    * @return true    
     */
     function deposit(uint _amount) public nonReentrant returns (bool) {
         emit Deposited(msg.sender, _amount);
@@ -48,6 +49,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @param _source Address holding unwrapped tokens.
     * @param _destination Address to receive wrapped tokens.
     * @param _amount Amount of tokens to wrap.
+    * @return true    
     */
     function depositFrom(address _source, address _destination, uint _amount) public nonReentrant returns (bool) {
         require(_source != address(0), "Source address cannot be a zero address.");
@@ -68,6 +70,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @dev Unwraps a specified amount of wrapped tokens into their original collateral.
     * Caller must have approved _amount allowance of wrapped tokens for this exchange contract address to unwrap.
     * @param _amount Amount of tokens to unwrap.
+    * @return true    
     */
     function withdraw(uint _amount) public nonReentrant returns (bool) {
         emit Withdrawn(msg.sender, _amount);
@@ -87,6 +90,7 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
     * @param _source Address holding wrapped tokens.
     * @param _destination Address to receive unwrapped tokens.
     * @param _amount Amount of tokens to unwrap.
+    * @return true
     */
     function withdrawFrom(address _source, address _destination, uint _amount) public nonReentrant returns (bool) {
         require(_source != address(0), "Source address cannot be a zero address.");
@@ -101,5 +105,13 @@ contract WrappedERC20Exchange is IExchange, ReentrancyGuard {
         token.safeTransfer(_destination, _amount);
 
         return true;
-    }    
+    }
+
+    /**
+    * @dev Returns the total amount of deposited (unwrapped) tokens in the exchange contract.
+    * @return uint Total amount of tokens
+    */
+    function supply() public view returns (uint) {
+        return token.balanceOf(address(this));
+    }
 }

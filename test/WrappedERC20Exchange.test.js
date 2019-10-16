@@ -67,6 +67,9 @@ contract("WrappedERC20Exchange", ([deployer, A, B, caller]) => {
 
     const newWrappedTokenBalance = await this.wrappedToken.balanceOf(A);
     assert.equal(newWrappedTokenBalance, DEPOSIT);
+
+    const exchangeSupply = await this.exchange.supply();
+    assert.equal(exchangeSupply, DEPOSIT);
   });
   
   it('can withdraw', async () => {
@@ -83,6 +86,9 @@ contract("WrappedERC20Exchange", ([deployer, A, B, caller]) => {
 
     const newWrappedTokenBalance = await this.wrappedToken.balanceOf(A);
     assert.equal(newWrappedTokenBalance, 0);
+
+    const exchangeSupply = await this.exchange.supply();
+    assert.equal(exchangeSupply, 0);    
   });
 
   it('can depositFrom', async () => {

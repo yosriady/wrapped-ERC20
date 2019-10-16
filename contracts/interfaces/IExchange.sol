@@ -14,4 +14,5 @@ interface IExchange {
         returns (bool);
     function token() external view returns (address);
     function wrappedToken() external view returns (address);
+    function supply() external view returns (uint256);
 }
