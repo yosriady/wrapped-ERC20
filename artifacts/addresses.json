@@ -3,8 +3,9 @@
     "rinkeby": {
       "WrappedERC20Factory": "0x1FFf610F99941cD1Ea2a5c32986a6eFE89B0d2Ca",
       "PAY": "0xF24247Eaf70B691C2804985954bF42DEF80c1720",
-      "wPAY": "0xecdba5e120abf076b65cd480476bb2bdda28ad26",
-      "wPAYExchange": "0x6a163d5f19bd0e4d1b76daab9a324250d8384eac"
+      "PAY": "0xecdba5e120abf076b65cd480476bb2bdda28ad26",
+      "wPAYExchange": "0x6a163d5f19bd0e4d1b76daab9a324250d8384eac",
+      "wPAYUniswapExchange": "0xf5d915570bc477f9b8d6c0e980aa81757a3aac36"
     }
   }
 }
