@@ -1,8 +1,10 @@
 {
   "networks": {
     "rinkeby": {
-      "SimpleStorage": "0x995624146e5D0E2Ed6f39652f29De930F0F422B6",
-      "WrappedERC20Factory": "0x974C945a1bc9B4F0ABA0325BB8d32241ef52408a"
+      "WrappedERC20Factory": "0x1FFf610F99941cD1Ea2a5c32986a6eFE89B0d2Ca",
+      "PAY": "0xF24247Eaf70B691C2804985954bF42DEF80c1720",
+      "wPAY": "0xecdba5e120abf076b65cd480476bb2bdda28ad26",
+      "wPAYExchange": "0x6a163d5f19bd0e4d1b76daab9a324250d8384eac"
     }
   }
 }

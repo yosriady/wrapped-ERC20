@@ -1,629 +1,652 @@
 {
-    "compiler": {
-        "name": "solc",
-        "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
-    },
-    "updatedAt": "2019-10-01T08:37:04.858Z",
-    "sources": {
-        "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol": {
-            "contracts": [
-                {
-                    "contractName": "IERC20MintableBurnable",
-                    "bytecode": "0x",
-                    "deployedBytecode": "0x",
-                    "sourceMap": "",
-                    "deployedSourceMap": ""
-                }
-            ],
-            "ast": {
-                "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol",
-                "exportedSymbols": {
-                    "IERC20MintableBurnable": [
-                        23
-                    ]
-                },
-                "id": 24,
-                "nodeType": "SourceUnit",
-                "nodes": [
-                    {
-                        "id": 1,
-                        "literals": [
-                            "solidity",
-                            "0.5",
-                            ".11"
-                        ],
-                        "nodeType": "PragmaDirective",
-                        "src": "0:23:0"
-                    },
-                    {
-                        "baseContracts": [],
-                        "contractDependencies": [],
-                        "contractKind": "interface",
-                        "documentation": null,
-                        "fullyImplemented": false,
-                        "id": 23,
-                        "linearizedBaseContracts": [
-                            23
-                        ],
-                        "name": "IERC20MintableBurnable",
-                        "nodeType": "ContractDefinition",
-                        "nodes": [
-                            {
-                                "body": null,
-                                "documentation": null,
-                                "id": 10,
-                                "implemented": false,
-                                "kind": "function",
-                                "modifiers": [],
-                                "name": "mint",
-                                "nodeType": "FunctionDefinition",
-                                "parameters": {
-                                    "id": 6,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [
-                                        {
-                                            "constant": false,
-                                            "id": 3,
-                                            "name": "account",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 10,
-                                            "src": "78:15:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_address",
-                                                "typeString": "address"
-                                            },
-                                            "typeName": {
-                                                "id": 2,
-                                                "name": "address",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "78:7:0",
-                                                "stateMutability": "nonpayable",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_address",
-                                                    "typeString": "address"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        },
-                                        {
-                                            "constant": false,
-                                            "id": 5,
-                                            "name": "amount",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 10,
-                                            "src": "95:14:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_uint256",
-                                                "typeString": "uint256"
-                                            },
-                                            "typeName": {
-                                                "id": 4,
-                                                "name": "uint256",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "95:7:0",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_uint256",
-                                                    "typeString": "uint256"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        }
-                                    ],
-                                    "src": "77:33:0"
-                                },
-                                "returnParameters": {
-                                    "id": 9,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [
-                                        {
-                                            "constant": false,
-                                            "id": 8,
-                                            "name": "",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 10,
-                                            "src": "129:4:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_bool",
-                                                "typeString": "bool"
-                                            },
-                                            "typeName": {
-                                                "id": 7,
-                                                "name": "bool",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "129:4:0",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_bool",
-                                                    "typeString": "bool"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        }
-                                    ],
-                                    "src": "128:6:0"
-                                },
-                                "scope": 23,
-                                "src": "64:71:0",
-                                "stateMutability": "nonpayable",
-                                "superFunction": null,
-                                "visibility": "external"
-                            },
-                            {
-                                "body": null,
-                                "documentation": null,
-                                "id": 15,
-                                "implemented": false,
-                                "kind": "function",
-                                "modifiers": [],
-                                "name": "burn",
-                                "nodeType": "FunctionDefinition",
-                                "parameters": {
-                                    "id": 13,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [
-                                        {
-                                            "constant": false,
-                                            "id": 12,
-                                            "name": "amount",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 15,
-                                            "src": "154:14:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_uint256",
-                                                "typeString": "uint256"
-                                            },
-                                            "typeName": {
-                                                "id": 11,
-                                                "name": "uint256",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "154:7:0",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_uint256",
-                                                    "typeString": "uint256"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        }
-                                    ],
-                                    "src": "153:16:0"
-                                },
-                                "returnParameters": {
-                                    "id": 14,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [],
-                                    "src": "178:0:0"
-                                },
-                                "scope": 23,
-                                "src": "140:39:0",
-                                "stateMutability": "nonpayable",
-                                "superFunction": null,
-                                "visibility": "external"
-                            },
-                            {
-                                "body": null,
-                                "documentation": null,
-                                "id": 22,
-                                "implemented": false,
-                                "kind": "function",
-                                "modifiers": [],
-                                "name": "burnFrom",
-                                "nodeType": "FunctionDefinition",
-                                "parameters": {
-                                    "id": 20,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [
-                                        {
-                                            "constant": false,
-                                            "id": 17,
-                                            "name": "account",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 22,
-                                            "src": "202:15:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_address",
-                                                "typeString": "address"
-                                            },
-                                            "typeName": {
-                                                "id": 16,
-                                                "name": "address",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "202:7:0",
-                                                "stateMutability": "nonpayable",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_address",
-                                                    "typeString": "address"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        },
-                                        {
-                                            "constant": false,
-                                            "id": 19,
-                                            "name": "amount",
-                                            "nodeType": "VariableDeclaration",
-                                            "scope": 22,
-                                            "src": "219:14:0",
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "typeDescriptions": {
-                                                "typeIdentifier": "t_uint256",
-                                                "typeString": "uint256"
-                                            },
-                                            "typeName": {
-                                                "id": 18,
-                                                "name": "uint256",
-                                                "nodeType": "ElementaryTypeName",
-                                                "src": "219:7:0",
-                                                "typeDescriptions": {
-                                                    "typeIdentifier": "t_uint256",
-                                                    "typeString": "uint256"
-                                                }
-                                            },
-                                            "value": null,
-                                            "visibility": "internal"
-                                        }
-                                    ],
-                                    "src": "201:33:0"
-                                },
-                                "returnParameters": {
-                                    "id": 21,
-                                    "nodeType": "ParameterList",
-                                    "parameters": [],
-                                    "src": "243:0:0"
-                                },
-                                "scope": 23,
-                                "src": "184:60:0",
-                                "stateMutability": "nonpayable",
-                                "superFunction": null,
-                                "visibility": "external"
-                            }
-                        ],
-                        "scope": 24,
-                        "src": "25:221:0"
-                    }
-                ],
-                "src": "0:247:0"
-            },
-            "legacyAST": {
-                "attributes": {
-                    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol",
-                    "exportedSymbols": {
-                        "IERC20MintableBurnable": [
-                            23
-                        ]
-                    }
-                },
-                "children": [
-                    {
-                        "attributes": {
-                            "literals": [
-                                "solidity",
-                                "0.5",
-                                ".11"
-                            ]
-                        },
-                        "id": 1,
-                        "name": "PragmaDirective",
-                        "src": "0:23:0"
-                    },
-                    {
-                        "attributes": {
-                            "baseContracts": [
-                                null
-                            ],
-                            "contractDependencies": [
-                                null
-                            ],
-                            "contractKind": "interface",
-                            "documentation": null,
-                            "fullyImplemented": false,
-                            "linearizedBaseContracts": [
-                                23
-                            ],
-                            "name": "IERC20MintableBurnable",
-                            "scope": 24
-                        },
-                        "children": [
-                            {
-                                "attributes": {
-                                    "body": null,
-                                    "documentation": null,
-                                    "implemented": false,
-                                    "isConstructor": false,
-                                    "kind": "function",
-                                    "modifiers": [
-                                        null
-                                    ],
-                                    "name": "mint",
-                                    "scope": 23,
-                                    "stateMutability": "nonpayable",
-                                    "superFunction": null,
-                                    "visibility": "external"
-                                },
-                                "children": [
-                                    {
-                                        "children": [
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "account",
-                                                    "scope": 10,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "address",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "address",
-                                                            "stateMutability": "nonpayable",
-                                                            "type": "address"
-                                                        },
-                                                        "id": 2,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "78:7:0"
-                                                    }
-                                                ],
-                                                "id": 3,
-                                                "name": "VariableDeclaration",
-                                                "src": "78:15:0"
-                                            },
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "amount",
-                                                    "scope": 10,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "uint256",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "uint256",
-                                                            "type": "uint256"
-                                                        },
-                                                        "id": 4,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "95:7:0"
-                                                    }
-                                                ],
-                                                "id": 5,
-                                                "name": "VariableDeclaration",
-                                                "src": "95:14:0"
-                                            }
-                                        ],
-                                        "id": 6,
-                                        "name": "ParameterList",
-                                        "src": "77:33:0"
-                                    },
-                                    {
-                                        "children": [
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "",
-                                                    "scope": 10,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "bool",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "bool",
-                                                            "type": "bool"
-                                                        },
-                                                        "id": 7,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "129:4:0"
-                                                    }
-                                                ],
-                                                "id": 8,
-                                                "name": "VariableDeclaration",
-                                                "src": "129:4:0"
-                                            }
-                                        ],
-                                        "id": 9,
-                                        "name": "ParameterList",
-                                        "src": "128:6:0"
-                                    }
-                                ],
-                                "id": 10,
-                                "name": "FunctionDefinition",
-                                "src": "64:71:0"
-                            },
-                            {
-                                "attributes": {
-                                    "body": null,
-                                    "documentation": null,
-                                    "implemented": false,
-                                    "isConstructor": false,
-                                    "kind": "function",
-                                    "modifiers": [
-                                        null
-                                    ],
-                                    "name": "burn",
-                                    "scope": 23,
-                                    "stateMutability": "nonpayable",
-                                    "superFunction": null,
-                                    "visibility": "external"
-                                },
-                                "children": [
-                                    {
-                                        "children": [
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "amount",
-                                                    "scope": 15,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "uint256",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "uint256",
-                                                            "type": "uint256"
-                                                        },
-                                                        "id": 11,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "154:7:0"
-                                                    }
-                                                ],
-                                                "id": 12,
-                                                "name": "VariableDeclaration",
-                                                "src": "154:14:0"
-                                            }
-                                        ],
-                                        "id": 13,
-                                        "name": "ParameterList",
-                                        "src": "153:16:0"
-                                    },
-                                    {
-                                        "attributes": {
-                                            "parameters": [
-                                                null
-                                            ]
-                                        },
-                                        "children": [],
-                                        "id": 14,
-                                        "name": "ParameterList",
-                                        "src": "178:0:0"
-                                    }
-                                ],
-                                "id": 15,
-                                "name": "FunctionDefinition",
-                                "src": "140:39:0"
-                            },
-                            {
-                                "attributes": {
-                                    "body": null,
-                                    "documentation": null,
-                                    "implemented": false,
-                                    "isConstructor": false,
-                                    "kind": "function",
-                                    "modifiers": [
-                                        null
-                                    ],
-                                    "name": "burnFrom",
-                                    "scope": 23,
-                                    "stateMutability": "nonpayable",
-                                    "superFunction": null,
-                                    "visibility": "external"
-                                },
-                                "children": [
-                                    {
-                                        "children": [
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "account",
-                                                    "scope": 22,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "address",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "address",
-                                                            "stateMutability": "nonpayable",
-                                                            "type": "address"
-                                                        },
-                                                        "id": 16,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "202:7:0"
-                                                    }
-                                                ],
-                                                "id": 17,
-                                                "name": "VariableDeclaration",
-                                                "src": "202:15:0"
-                                            },
-                                            {
-                                                "attributes": {
-                                                    "constant": false,
-                                                    "name": "amount",
-                                                    "scope": 22,
-                                                    "stateVariable": false,
-                                                    "storageLocation": "default",
-                                                    "type": "uint256",
-                                                    "value": null,
-                                                    "visibility": "internal"
-                                                },
-                                                "children": [
-                                                    {
-                                                        "attributes": {
-                                                            "name": "uint256",
-                                                            "type": "uint256"
-                                                        },
-                                                        "id": 18,
-                                                        "name": "ElementaryTypeName",
-                                                        "src": "219:7:0"
-                                                    }
-                                                ],
-                                                "id": 19,
-                                                "name": "VariableDeclaration",
-                                                "src": "219:14:0"
-                                            }
-                                        ],
-                                        "id": 20,
-                                        "name": "ParameterList",
-                                        "src": "201:33:0"
-                                    },
-                                    {
-                                        "attributes": {
-                                            "parameters": [
-                                                null
-                                            ]
-                                        },
-                                        "children": [],
-                                        "id": 21,
-                                        "name": "ParameterList",
-                                        "src": "243:0:0"
-                                    }
-                                ],
-                                "id": 22,
-                                "name": "FunctionDefinition",
-                                "src": "184:60:0"
-                            }
-                        ],
-                        "id": 23,
-                        "name": "ContractDefinition",
-                        "src": "25:221:0"
-                    }
-                ],
-                "id": 24,
-                "name": "SourceUnit",
-                "src": "0:247:0"
-            },
-            "id": 0,
-            "source": "pragma solidity 0.5.11;\n\ninterface IERC20MintableBurnable {\n    function mint(address account, uint256 amount) external returns (bool);\n    function burn(uint256 amount) external;\n    function burnFrom(address account, uint256 amount) external;\n}\n"
+  "contractName": "IERC20MintableBurnable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
         }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burnFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burnFrom\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol\":\"IERC20MintableBurnable\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol\":{\"keccak256\":\"0x9f49a0b1f18912e6fb1e65ae7a088ece85170984c736aaa602a95bfea003195c\",\"urls\":[\"bzz-raw://6ac02e94919ca263a2444a0b128e42b4b153b03d6caf52dc09a47a6b9347d8f8\",\"dweb:/ipfs/QmWtRTDZayGbNsLBM3iT8RTXFLsspnKfsBaospcFtck1CT\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.11;\n\ninterface IERC20MintableBurnable {\n    function mint(address account, uint256 amount) external returns (bool);\n    function burn(uint256 amount) external;\n    function burnFrom(address account, uint256 amount) external;\n}\n",
+  "sourcePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol",
+  "ast": {
+    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol",
+    "exportedSymbols": {
+      "IERC20MintableBurnable": [
+        452
+      ]
+    },
+    "id": 453,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 430,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 452,
+        "linearizedBaseContracts": [
+          452
+        ],
+        "name": "IERC20MintableBurnable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 439,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 432,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "78:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "78:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 434,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "95:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 433,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "77:33:6"
+            },
+            "returnParameters": {
+              "id": 438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 437,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "129:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 436,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "128:6:6"
+            },
+            "scope": 452,
+            "src": "64:71:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 441,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 444,
+                  "src": "154:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 440,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:16:6"
+            },
+            "returnParameters": {
+              "id": 443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "178:0:6"
+            },
+            "scope": 452,
+            "src": "140:39:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 451,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burnFrom",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 446,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "202:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 445,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "202:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 448,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "219:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 447,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "201:33:6"
+            },
+            "returnParameters": {
+              "id": 450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "243:0:6"
+            },
+            "scope": 452,
+            "src": "184:60:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 453,
+        "src": "25:221:6"
+      }
+    ],
+    "src": "0:247:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/interfaces/IERC20MintableBurnable.sol",
+    "exportedSymbols": {
+      "IERC20MintableBurnable": [
+        452
+      ]
+    },
+    "id": 453,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 430,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 452,
+        "linearizedBaseContracts": [
+          452
+        ],
+        "name": "IERC20MintableBurnable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 439,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 432,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "78:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "78:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 434,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "95:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 433,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "77:33:6"
+            },
+            "returnParameters": {
+              "id": 438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 437,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 439,
+                  "src": "129:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 436,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "128:6:6"
+            },
+            "scope": 452,
+            "src": "64:71:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 441,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 444,
+                  "src": "154:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 440,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:16:6"
+            },
+            "returnParameters": {
+              "id": 443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "178:0:6"
+            },
+            "scope": 452,
+            "src": "140:39:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 451,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burnFrom",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 446,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "202:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 445,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "202:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 448,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "219:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 447,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "201:33:6"
+            },
+            "returnParameters": {
+              "id": 450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "243:0:6"
+            },
+            "scope": 452,
+            "src": "184:60:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 453,
+        "src": "25:221:6"
+      }
+    ],
+    "src": "0:247:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-10-04T10:39:36.837Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
 }
