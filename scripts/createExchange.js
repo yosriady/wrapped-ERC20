@@ -3,28 +3,13 @@ const argv = require('minimist')(process.argv.slice(), { string: ['network', 'to
 const Web3 = require('web3');
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const contract = require('truffle-contract');
-
+const { getNodeEndpoint, getNetworkId } = require('./utils');
 const UniswapFactoryABI = require('../artifacts/uniswap/Factory.json');
+
+// Start of configurable parameters
 const MAINNET_FACTORY_ADDRESS = '0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95';
 const RINKEBY_FACTORY_ADDRESS = '0xf5D915570BC477f9B8D6C0E980aA81757A3AaC36';
-
-function getNodeEndpoint(network) {
-  const endpoint = `https://${network}.infura.io/v3/${process.env.INFURA_ACCESS_TOKEN}`;
-  return endpoint;
-}
-
-function getNetworkId(network) {
-  switch (network) {
-    case 'mainnet':
-      return '1';
-    case 'rinkeby':
-      return '4';
-    case 'local':
-      return '5777';
-    default:
-      throw new Error('Invalid network.');
-  }
-}
+// End of configurable parameters
 
 function getFactoryAddress(network) {
   switch (network) {
@@ -61,6 +46,8 @@ async function main() {
   console.log(`Creating Exchange for ${token}`);
   await factory.createExchange(token);
   console.log('Completed');
+
+  return process.exit(0);
 }
 
 // Usage: node scripts/createExchange.js --network rinkeby --token 0x....
