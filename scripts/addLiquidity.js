@@ -9,6 +9,7 @@ const UniswapExchangeABI = require('../artifacts/uniswap/Exchange.json');
 // Start of configurable parameters
 const MAINNET_UNISWAP_EXCHANGE_ADDRESS = '';
 const RINKEBY_UNISWAP_EXCHANGE_ADDRESS = '0x71e5561e12bc4a5dc21536193ec9d7f0c48b4a19';
+const NOW = Math.round(Date.now() / 1000);
 // End of configurable parameters
 
 function getExchangeAddress(network) {
@@ -50,11 +51,18 @@ async function main() {
 
   console.log(`Adding liquidity to Uniswap exchange ${exchangeAddress}`);
   // https://docs.uniswap.io/frontend-integration/pool#add-liquidity
-  const min_liquidity = 
-  const max_tokens = 
-  const deadline = 
-  const ethAmount = 
-  await exchange.addLiquidity(min_liquidity, max_tokens, deadline, { value: ethAmount });
+  // https://github.com/Uniswap/contracts-vyper/blob/master/contracts/uniswap_exchange.vy#L51-L57
+  // Adding liquidity requires depositing an equivalent value of ETH and the ERC20 tokens (WPAY) 
+  // into the ERC20 token’s associated exchange contract.
+  
+  // [17 Oct] ETH is $176.21, PAY is $0.087 -> 1 ETH ~= 2025 PAY
+  // TODO: parameterize these variables
+  const min_liquidity = 0; // 0 for first time liquidity is added
+  const max_tokens = 1000000000000000000000 // 1000 WPAY, first liquidity
+  const deadline = NOW + 300; // 5 minutes (300 secs) from now
+  const ethAmount = web3.utils.toWei('0.1', 'ether');
+  console.log(ethAmount);
+  // await exchange.addLiquidity(min_liquidity, max_tokens, deadline, { value: ethAmount });
   console.log('Completed');
 
   return process.exit(0);
