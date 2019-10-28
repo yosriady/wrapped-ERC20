@@ -14,7 +14,8 @@ const RINKEBY_UNISWAP_EXCHANGE_ADDRESS = '0x71e5561e12bc4a5dc21536193ec9d7f0c48b
 const MAINNET_WPAY_ADDRESS = '';
 const RINKEBY_WPAY_ADDRESS = '0xecdba5e120abf076b65cd480476bb2bdda28ad26';
 const INITIAL_LIQUIDITY = new BN('200000000000000000000'); // 200 PAY
-const NEW_LIQUIDITY = INITIAL_LIQUIDITY; // TODO: parameterize for CLI
+const NEW_LIQUIDITY = INITIAL_LIQUIDITY;
+const NEW_ETHER = web3.utils.toWei('0.1', 'ether');
 const NOW = Math.round(Date.now() / 1000);
 // End of configurable parameters
 
@@ -84,8 +85,8 @@ async function main() {
   // [17 Oct] ETH is $176.21, PAY is $0.087 -> 1 ETH ~= 2025 PAY, 0.1 ETH ~= 203 PAY
   // TODO: parameterize these variables
   const min_liquidity = 0; // 0 for first time liquidity is added
-  const max_tokens = NEW_LIQUIDITY
-  const ethAmount = web3.utils.toWei('0.1', 'ether');
+  const max_tokens = NEW_LIQUIDITY;
+  const ethAmount = NEW_ETHER;
   const deadline = NOW + 300; // 5 minutes (300 secs) from now
   await exchange.addLiquidity(min_liquidity, max_tokens, deadline, { value: ethAmount });
   console.log('Add Liquidity Completed');

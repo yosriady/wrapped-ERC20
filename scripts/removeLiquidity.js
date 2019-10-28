@@ -10,7 +10,8 @@ const UniswapExchangeABI = require('../artifacts/uniswap/Exchange.json');
 // Start of configurable parameters
 const MAINNET_UNISWAP_EXCHANGE_ADDRESS = '';
 const RINKEBY_UNISWAP_EXCHANGE_ADDRESS = '0x71e5561e12bc4a5dc21536193ec9d7f0c48b4a19';
-const REMOVED_LIQUIDITY = new BN('100000000000000000000'); // 100 PAY
+const REMOVED_TOKENS = new BN('100000000000000000000'); // 100 PAY
+const REMOVED_ETHER = web3.utils.toWei('0.05', 'ether');
 const NOW = Math.round(Date.now() / 1000);
 // End of configurable parameters
 
@@ -49,9 +50,9 @@ async function main() {
   console.log(`Removing liquidity from Uniswap exchange ${exchangeAddress}`);
   // https://docs.uniswap.io/frontend-integration/pool#remove-liquidity
   // TODO: parameterize these variables
-  const amount = web3.utils.toWei('0.05', 'ether');
-  const min_tokens = REMOVED_LIQUIDITY;
-  const min_eth = web3.utils.toWei('0.05', 'ether');
+  const amount = REMOVED_ETHER;
+  const min_tokens = REMOVED_TOKENS;
+  const min_eth = REMOVED_ETHER;
   const deadline = NOW + 300; // 5 minutes (300 secs) from now
   await exchange.removeLiquidity(amount, min_eth, min_tokens, deadline);
   console.log('Remove Liquidity Completed');
