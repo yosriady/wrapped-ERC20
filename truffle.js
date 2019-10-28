@@ -27,7 +27,7 @@ module.exports = {
     mainnet: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, MAINNET_ENDPOINT),
       network_id: 1,
-      skipDryRun: false,
+      skipDryRun: true,
       gasPrice: 10000000000, // 10 gwei
       gas: 8000000,
     },

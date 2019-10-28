@@ -7996,7 +7996,7 @@
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-10-17T11:36:25.045Z",
+  "updatedAt": "2019-10-28T17:45:48.410Z",
   "devdoc": {
     "details": "Test PAY token based on actual deployed contract. The real rollout will require calling the real mainnet PAY Token contract.",
     "methods": {
