@@ -80,12 +80,13 @@ async function main() {
   // Adding liquidity requires depositing an equivalent value of ETH and the ERC20 tokens (WPAY) 
   // into the ERC20 token’s associated exchange contract.
   
+  // Note: liquidity providers must deposit at the current exchange rate
   // [17 Oct] ETH is $176.21, PAY is $0.087 -> 1 ETH ~= 2025 PAY, 0.1 ETH ~= 203 PAY
   // TODO: parameterize these variables
   const min_liquidity = 0; // 0 for first time liquidity is added
   const max_tokens = NEW_LIQUIDITY
-  const deadline = NOW + 300; // 5 minutes (300 secs) from now
   const ethAmount = web3.utils.toWei('0.1', 'ether');
+  const deadline = NOW + 300; // 5 minutes (300 secs) from now
   await exchange.addLiquidity(min_liquidity, max_tokens, deadline, { value: ethAmount });
   console.log('Add Liquidity Completed');
 
