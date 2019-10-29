@@ -3,9 +3,16 @@
     "rinkeby": {
       "WrappedERC20Factory": "0x1FFf610F99941cD1Ea2a5c32986a6eFE89B0d2Ca",
       "PAY": "0xF24247Eaf70B691C2804985954bF42DEF80c1720",
-      "PAY": "0xecdba5e120abf076b65cd480476bb2bdda28ad26",
+      "WPAY": "0xecdba5e120abf076b65cd480476bb2bdda28ad26",
       "WPAYExchange": "0x6a163d5f19bd0e4d1b76daab9a324250d8384eac",
       "WPAYUniswapExchange": "71e5561e12bc4a5dc21536193ec9d7f0c48b4a19"
+    },
+    "mainnet": {
+      "WrappedERC20Factory": "0x3cea4205ed7a3a7c25c8a5c6dbb374e872f51523",
+      "PAY": "b97048628db6b661d4c2aa833e95dbe1a905b280",
+      "WPAY": "0x2ca06986040d18d80acd34d0877e66f8e15f12fc",
+      "WPAYExchange": "0x173bfb1d4344440a5877fafce84867785fcc7e24",
+      "WPAYUniswapExchange": ""
     }
   }
 }
