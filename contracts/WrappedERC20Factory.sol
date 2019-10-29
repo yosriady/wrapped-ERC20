@@ -44,7 +44,7 @@ contract WrappedERC20Factory is IFactory {
         // Get name, symbol, and decimals directly from _token, via ERC20Detailed
         IERC20Detailed t = IERC20Detailed(address(_token));
         string memory wrappedName = string(abi.encodePacked("Wrapped", " ", t.name()));
-        string memory wrappedSymbol = string(abi.encodePacked("w", t.symbol())); // e.g. wPAY
+        string memory wrappedSymbol = string(abi.encodePacked("W", t.symbol())); // e.g. wPAY
         uint8 wrappedDecimals = uint8(t.decimals()); // Conversion from old ERC20 uint256 decimals to new uint8
 
         IERC20MintableBurnable wrappedToken = new WrappedERC20(

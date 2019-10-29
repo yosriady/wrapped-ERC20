@@ -5,7 +5,7 @@ const WrappedERC20 = artifacts.require("WrappedERC20");
 const PAYToken = artifacts.require("PAYToken");
 
 const WRAPPED_TOKEN_NAME = 'Wrapped PAY Token';
-const WRAPPED_TOKEN_SYMBOL = 'wPAY';
+const WRAPPED_TOKEN_SYMBOL = 'WPAY';
 const DECIMALS = 18;
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 

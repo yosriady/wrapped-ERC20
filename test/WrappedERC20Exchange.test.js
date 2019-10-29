@@ -11,7 +11,7 @@ const DECIMALS = 18;
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 const INITIAL_BALANCE = 1000;
 
-contract("WrappedERC20Exchange", ([deployer, A]) => { 
+contract("WrappedERC20Exchange", ([deployer, A, B, caller]) => { 
   before(async () => {
     // Deploys ERC20 token
     this.token = await PAYToken.new();
@@ -67,6 +67,9 @@ contract("WrappedERC20Exchange", ([deployer, A]) => {
 
     const newWrappedTokenBalance = await this.wrappedToken.balanceOf(A);
     assert.equal(newWrappedTokenBalance, DEPOSIT);
+
+    const exchangeSupply = await this.exchange.supply();
+    assert.equal(exchangeSupply, DEPOSIT);
   });
   
   it('can withdraw', async () => {
@@ -82,6 +85,41 @@ contract("WrappedERC20Exchange", ([deployer, A]) => {
     assert.equal(newTokenBalance, INITIAL_BALANCE);
 
     const newWrappedTokenBalance = await this.wrappedToken.balanceOf(A);
+    assert.equal(newWrappedTokenBalance, 0);
+
+    const exchangeSupply = await this.exchange.supply();
+    assert.equal(exchangeSupply, 0);    
+  });
+
+  it('can depositFrom', async () => {
+    const DEPOSIT = 100;
+    await this.token.approve(this.exchange.address, DEPOSIT, { from: A });
+
+    const allowance = await this.token.allowance(A, this.exchange.address);
+    assert.equal(allowance, DEPOSIT);
+
+    await this.exchange.depositFrom(A, B, DEPOSIT, { from: caller });
+
+    const newTokenBalance = await this.token.balanceOf(A);
+    assert.equal(newTokenBalance, (INITIAL_BALANCE - DEPOSIT));
+
+    const newWrappedTokenBalance = await this.wrappedToken.balanceOf(B);
+    assert.equal(newWrappedTokenBalance, DEPOSIT);
+  });
+
+  it('can withdrawFrom', async () => {
+    const WITHDRAW = 100;
+    await this.wrappedToken.approve(this.exchange.address, WITHDRAW, { from: B });
+    
+    const allowance = await this.wrappedToken.allowance(B, this.exchange.address);
+    assert.equal(allowance, WITHDRAW);
+
+    await this.exchange.withdrawFrom(B, A, WITHDRAW, { from: caller });
+
+    const newTokenBalance = await this.token.balanceOf(A);
+    assert.equal(newTokenBalance, INITIAL_BALANCE);
+
+    const newWrappedTokenBalance = await this.wrappedToken.balanceOf(B);
     assert.equal(newWrappedTokenBalance, 0);
   });
 });
