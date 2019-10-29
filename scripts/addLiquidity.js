@@ -9,13 +9,13 @@ const UniswapExchangeABI = require('../artifacts/uniswap/Exchange.json');
 const { abi: WrappedERC20ABI } = require('../artifacts/abis/WrappedERC20.json');
 
 // Start of configurable parameters
-const MAINNET_UNISWAP_EXCHANGE_ADDRESS = '';
+const MAINNET_UNISWAP_EXCHANGE_ADDRESS = '0xde158c2d2000084c502a873a76c4b9a41277d5f5';
 const RINKEBY_UNISWAP_EXCHANGE_ADDRESS = '0x71e5561e12bc4a5dc21536193ec9d7f0c48b4a19';
-const MAINNET_WPAY_ADDRESS = '';
+const MAINNET_WPAY_ADDRESS = '0x2ca06986040d18d80acd34d0877e66f8e15f12fc';
 const RINKEBY_WPAY_ADDRESS = '0xecdba5e120abf076b65cd480476bb2bdda28ad26';
-const INITIAL_LIQUIDITY = new BN('200000000000000000000'); // 200 PAY
+const INITIAL_LIQUIDITY = new BN('110000000000000000000'); // 110 PAY
 const NEW_LIQUIDITY = INITIAL_LIQUIDITY;
-const NEW_ETHER = web3.utils.toWei('0.1', 'ether');
+const NEW_ETHER = web3.utils.toWei('0.05', 'ether'); // 0.05 ETH
 const NOW = Math.round(Date.now() / 1000);
 // End of configurable parameters
 
@@ -71,9 +71,9 @@ async function main() {
   const exchangeAddress = getExchangeAddress(network);
   const exchange = await UniswapExchange.at(exchangeAddress);
 
-  console.log(`Approving ${NEW_LIQUIDITY} wPAY to Uniswap exchange ${exchangeAddress}`)
-  await wpay.approve(exchangeAddress, NEW_LIQUIDITY);
-  console.log('Approve Completed');
+  // console.log(`Approving ${NEW_LIQUIDITY} wPAY to Uniswap exchange ${exchangeAddress}`)
+  // await wpay.approve(exchangeAddress, NEW_LIQUIDITY);
+  // console.log('Approve Completed');
 
   console.log(`Adding liquidity to Uniswap exchange ${exchangeAddress}`);
   // https://docs.uniswap.io/frontend-integration/pool#add-liquidity

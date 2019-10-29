@@ -9,10 +9,10 @@
     },
     "mainnet": {
       "WrappedERC20Factory": "0x3cea4205ed7a3a7c25c8a5c6dbb374e872f51523",
-      "PAY": "b97048628db6b661d4c2aa833e95dbe1a905b280",
+      "PAY": "0xb97048628db6b661d4c2aa833e95dbe1a905b280",
       "WPAY": "0x2ca06986040d18d80acd34d0877e66f8e15f12fc",
       "WPAYExchange": "0x173bfb1d4344440a5877fafce84867785fcc7e24",
-      "WPAYUniswapExchange": ""
+      "WPAYUniswapExchange": "0xde158c2d2000084c502a873a76c4b9a41277d5f5"
     }
   }
 }
