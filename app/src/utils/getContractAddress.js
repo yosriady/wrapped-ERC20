@@ -1,9 +1,12 @@
-import PAY from "./../abis/PAYToken.json";
+import PAY from "./../abis/PAY.json";
+import WPAY from "./../abis/WPAY.json";
 
 const abis = {
   PAY,
+  WPAY,
 }
 
-export default (contractName, networkID) => {
-  const abi = abis[contractName]['networks'][networkId].address;
+export default (contractName, networkId) => {
+  const abi = abis[contractName].networks[networkId];
+  return abi.address;
 }

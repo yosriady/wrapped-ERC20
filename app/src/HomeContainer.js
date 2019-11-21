@@ -8,7 +8,7 @@ const mapStateToProps = state => {
     TutorialToken: state.contracts.TutorialToken,
     drizzleStatus: state.drizzleStatus,
     web3: state.web3,
-    network: state.web3.networkId,
+    networkId: state.web3.networkId,
     contracts: state.contracts,
   };
 };
