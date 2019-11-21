@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ToastContainer } from 'react-toastify'
 import {
   AccountData,
   ContractData,
@@ -26,6 +27,8 @@ export default class HomePage extends Component {
 
     return (
       <div className="App">
+        <ToastContainer />
+
         <div>
           <img src={logo} alt="drizzle-logo" />
           <h1>WPAY Token Swap ({networkName})</h1>
@@ -40,10 +43,13 @@ export default class HomePage extends Component {
             <ContractData contract="PAY" method="balanceOf" methodArgs={[currentAccount]}/>
           </p>
           <p>
-            <strong>PAY Allowance: </strong>
+            <strong>PAY Allowance for Wrapping: </strong>
             <ContractData contract="PAY" method="allowance" methodArgs={[currentAccount, ExchangeAddress]}/>
           </p>
-          <ContractForm contract="PAY" method="approve" />
+         <p>
+            <strong>Approve PAY</strong>          
+            <ContractForm contract="PAY" method="approve" />
+          </p>
         </div>
 
         <div className="section">
@@ -54,10 +60,13 @@ export default class HomePage extends Component {
             <ContractData contract="WPAY" method="balanceOf" methodArgs={[currentAccount]}/>
           </p>
           <p>
-            <strong>WPAY Allowance: </strong>
+            <strong>WPAY Allowance for Unwrapping: </strong>
             <ContractData contract="WPAY" method="allowance" methodArgs={[currentAccount, ExchangeAddress]}/>
           </p>
-          <ContractForm contract="WPAY" method="approve" />
+         <p>
+            <strong>Approve WPAY</strong>             
+            <ContractForm contract="WPAY" method="approve" />
+          </p>
         </div>    
 
 
@@ -66,11 +75,18 @@ export default class HomePage extends Component {
           <p>Deployed at <a href={ExchangeEtherscan}>{ExchangeAddress}</a></p>
           <p>
             <strong>Total PAY wrapped: </strong>
-            {/* <ContractData contract="WPAYExchange" method="supply" /> */}
+            <ContractData contract="WPAYExchange" method="supply" />
           </p>
-          {/* <ContractForm contract="WPAYExchange" method="deposit" />
 
-          <ContractForm contract="WPAYExchange" method="withdraw" /> */}
+          <p>
+            <strong>Wrap PAY</strong>
+            <ContractForm contract="WPAYExchange" method="deposit" />
+          </p>
+
+          <p>
+            <strong>Unwrap WPAY</strong>
+            <ContractForm contract="WPAYExchange" method="withdraw" />
+          </p>  
         </div>
       </div>
     );

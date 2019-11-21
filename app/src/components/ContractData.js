@@ -19,7 +19,7 @@ class ContractData extends Component {
 
   // Will not fix legacy component
   // eslint-disable-next-line react/no-deprecated
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { methodArgs, contract, method } = this.props;
 
     const didContractChange = contract !== nextProps.contract;

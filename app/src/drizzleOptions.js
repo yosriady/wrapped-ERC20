@@ -4,7 +4,7 @@ import WPAY from "./abis/WPAY.json";
 import WPAYExchange from "./abis/WPAYExchange.json";
 
 const options = {
-  contracts: [PAY, WPAY],
+  contracts: [PAY, WPAY, WPAYExchange],
   events: {
     PAY: ["Approval", "Transfer"],
     WPAY: ["Approval", "Transfer"],
