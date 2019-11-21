@@ -1,7 +1,7 @@
-import getContractAddress from "./getContractAddress.js";
+import getContractInfo from "./getContractInfo.js";
 import getNetworkName from "./getNetworkName.js";
 
 export {
-  getContractAddress,
+  getContractInfo,
   getNetworkName
 };
