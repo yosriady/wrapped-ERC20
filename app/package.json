@@ -9,7 +9,9 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "react-toastify": "^5.4.1"
+    "react-toastify": "^5.4.1",
+    "rimble-ui": "^0.11.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
