@@ -11,8 +11,6 @@ import {
 
 import logo from "./logo.png";
 
-const WPAY_EXCHANGE_ADDRESS = '0x172f95f4e9E3C92dA07671DaD52Cea341d16B987'; // TODO
-
 export default class HomePage extends Component {
   constructor(props, context) {
     super(props);
@@ -23,6 +21,7 @@ export default class HomePage extends Component {
     const currentAccount = accounts[0];
     const { address: PAYAddress, etherscan: PAYEtherscan } = getContractInfo('PAY', networkId);
     const { address: WPAYAddress, etherscan: WPAYEtherscan } = getContractInfo('WPAY', networkId);
+    const { address: ExchangeAddress, etherscan: ExchangeEtherscan } = getContractInfo('WPAYExchange', networkId);
     const networkName = getNetworkName(networkId);
 
     return (
@@ -42,7 +41,7 @@ export default class HomePage extends Component {
           </p>
           <p>
             <strong>PAY Allowance: </strong>
-            <ContractData contract="PAY" method="allowance" methodArgs={[currentAccount, WPAY_EXCHANGE_ADDRESS]}/>
+            <ContractData contract="PAY" method="allowance" methodArgs={[currentAccount, ExchangeAddress]}/>
           </p>
           <ContractForm contract="PAY" method="approve" />
         </div>
@@ -56,7 +55,7 @@ export default class HomePage extends Component {
           </p>
           <p>
             <strong>WPAY Allowance: </strong>
-            <ContractData contract="WPAY" method="allowance" methodArgs={[currentAccount, WPAY_EXCHANGE_ADDRESS]}/>
+            <ContractData contract="WPAY" method="allowance" methodArgs={[currentAccount, ExchangeAddress]}/>
           </p>
           <ContractForm contract="WPAY" method="approve" />
         </div>    
@@ -64,10 +63,14 @@ export default class HomePage extends Component {
 
           <div className="section">
           <h2>WPAY Exchange</h2>
-          <p>Deployed at <a href={WPAYEtherscan}>{WPAYAddress}</a></p>
+          <p>Deployed at <a href={ExchangeEtherscan}>{ExchangeAddress}</a></p>
           <p>
-            TODO
+            <strong>Total PAY wrapped: </strong>
+            {/* <ContractData contract="WPAYExchange" method="supply" /> */}
           </p>
+          {/* <ContractForm contract="WPAYExchange" method="deposit" />
+
+          <ContractForm contract="WPAYExchange" method="withdraw" /> */}
         </div>
       </div>
     );
