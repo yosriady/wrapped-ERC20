@@ -45,12 +45,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"storedData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"StorageSet\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol\":{\"keccak256\":\"0xbac7f1c6b4364baec3bd03ef1085097315ee9ef2a52b79b894a17a8aa9562977\",\"urls\":[\"bzz-raw://72fa71d8baca211585377155d61992e3725dd4195b8f28190287c5f243786a15\",\"dweb:/ipfs/QmVFVnpEp98sjHG7ooFcjrRNrmtPF1H3mUytAjJmcNHNMK\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061010e806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a72315820ea6a9fbfdc0e12e84923425242caa888f4c2e14c50956753370e5994bacd8c8464736f6c634300050b0032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a72315820ea6a9fbfdc0e12e84923425242caa888f4c2e14c50956753370e5994bacd8c8464736f6c634300050b0032",
-  "sourceMap": "34:214:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:214:12;;;;;;;",
-  "deployedSourceMap": "34:214:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:214:12;;;;;;;;;;;;;;;;;;;;;;;;103:22;;;:::i;:::-;;;;;;;;;;;;;;;;132:114;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;132:114:12;;:::i;:::-;;103:22;;;;:::o;132:114::-;170:10;:14;;;200:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;132:114;:::o",
-  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract SimpleStorage {\n    event StorageSet(string _message);\n\n    uint public storedData;\n\n    function set(uint x) public {\n        storedData = x;\n\n        emit StorageSet(\"Data stored successfully!\");\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"storedData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"StorageSet\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol\":{\"keccak256\":\"0x01512d408073774f1eb11ab1a7d4f91ea4b88654fde856a1117c40a508c0e60d\",\"urls\":[\"bzz-raw://29e30579420ed092d346d31d07c7ed63c770091a5df1fb0372481ecf1efb6c9c\",\"dweb:/ipfs/QmdEeYk9KvAofgbAHwwpHbfwEB5oFAa3uPcWxYPGZ7vSG4\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061010e806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a723158206f12deab678af9c18d7653f8306419db52af802215edd5f03a83ef1f176b1afa64736f6c634300050b0032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1afcd914603757806360fe47b114604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a15056fea265627a7a723158206f12deab678af9c18d7653f8306419db52af802215edd5f03a83ef1f176b1afa64736f6c634300050b0032",
+  "sourceMap": "34:220:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:220:12;;;;;;;",
+  "deployedSourceMap": "34:220:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:220:12;;;;;;;;;;;;;;;;;;;;;;;;103:25;;;:::i;:::-;;;;;;;;;;;;;;;;135:117;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;135:117:12;;:::i;:::-;;103:25;;;;:::o;135:117::-;176:10;:14;;;206:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;135:117;:::o",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract SimpleStorage {\n    event StorageSet(string _message);\n\n    uint256 public storedData;\n\n    function set(uint256 x) public {\n        storedData = x;\n\n        emit StorageSet(\"Data stored successfully!\");\n    }\n}\n",
   "sourcePath": "/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol",
   "ast": {
     "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol",
@@ -137,7 +137,7 @@
             "name": "storedData",
             "nodeType": "VariableDeclaration",
             "scope": 1282,
-            "src": "103:22:12",
+            "src": "103:25:12",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -146,9 +146,9 @@
             },
             "typeName": {
               "id": 1266,
-              "name": "uint",
+              "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "103:4:12",
+              "src": "103:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -161,7 +161,7 @@
             "body": {
               "id": 1280,
               "nodeType": "Block",
-              "src": "160:86:12",
+              "src": "166:86:12",
               "statements": [
                 {
                   "expression": {
@@ -178,7 +178,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1267,
-                      "src": "170:10:12",
+                      "src": "176:10:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -193,13 +193,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1269,
-                      "src": "183:1:12",
+                      "src": "189:1:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "170:14:12",
+                    "src": "176:14:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -207,7 +207,7 @@
                   },
                   "id": 1275,
                   "nodeType": "ExpressionStatement",
-                  "src": "170:14:12"
+                  "src": "176:14:12"
                 },
                 {
                   "eventCall": {
@@ -223,7 +223,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "211:27:12",
+                        "src": "217:27:12",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
@@ -244,7 +244,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1265,
-                      "src": "200:10:12",
+                      "src": "206:10:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
@@ -258,7 +258,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "200:39:12",
+                    "src": "206:39:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -266,7 +266,7 @@
                   },
                   "id": 1279,
                   "nodeType": "EmitStatement",
-                  "src": "195:44:12"
+                  "src": "201:44:12"
                 }
               ]
             },
@@ -287,7 +287,7 @@
                   "name": "x",
                   "nodeType": "VariableDeclaration",
                   "scope": 1281,
-                  "src": "145:6:12",
+                  "src": "148:9:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -296,9 +296,9 @@
                   },
                   "typeName": {
                     "id": 1268,
-                    "name": "uint",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "145:4:12",
+                    "src": "148:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -308,26 +308,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "144:8:12"
+              "src": "147:11:12"
             },
             "returnParameters": {
               "id": 1271,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "160:0:12"
+              "src": "166:0:12"
             },
             "scope": 1282,
-            "src": "132:114:12",
+            "src": "135:117:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 1283,
-        "src": "34:214:12"
+        "src": "34:220:12"
       }
     ],
-    "src": "0:249:12"
+    "src": "0:255:12"
   },
   "legacyAST": {
     "absolutePath": "/Users/yos/work/wrapped-ERC20/contracts/mocks/SimpleStorage.sol",
@@ -414,7 +414,7 @@
             "name": "storedData",
             "nodeType": "VariableDeclaration",
             "scope": 1282,
-            "src": "103:22:12",
+            "src": "103:25:12",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -423,9 +423,9 @@
             },
             "typeName": {
               "id": 1266,
-              "name": "uint",
+              "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "103:4:12",
+              "src": "103:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -438,7 +438,7 @@
             "body": {
               "id": 1280,
               "nodeType": "Block",
-              "src": "160:86:12",
+              "src": "166:86:12",
               "statements": [
                 {
                   "expression": {
@@ -455,7 +455,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1267,
-                      "src": "170:10:12",
+                      "src": "176:10:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -470,13 +470,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1269,
-                      "src": "183:1:12",
+                      "src": "189:1:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "170:14:12",
+                    "src": "176:14:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -484,7 +484,7 @@
                   },
                   "id": 1275,
                   "nodeType": "ExpressionStatement",
-                  "src": "170:14:12"
+                  "src": "176:14:12"
                 },
                 {
                   "eventCall": {
@@ -500,7 +500,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "211:27:12",
+                        "src": "217:27:12",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
@@ -521,7 +521,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1265,
-                      "src": "200:10:12",
+                      "src": "206:10:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
@@ -535,7 +535,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "200:39:12",
+                    "src": "206:39:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -543,7 +543,7 @@
                   },
                   "id": 1279,
                   "nodeType": "EmitStatement",
-                  "src": "195:44:12"
+                  "src": "201:44:12"
                 }
               ]
             },
@@ -564,7 +564,7 @@
                   "name": "x",
                   "nodeType": "VariableDeclaration",
                   "scope": 1281,
-                  "src": "145:6:12",
+                  "src": "148:9:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -573,9 +573,9 @@
                   },
                   "typeName": {
                     "id": 1268,
-                    "name": "uint",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "145:4:12",
+                    "src": "148:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -585,26 +585,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "144:8:12"
+              "src": "147:11:12"
             },
             "returnParameters": {
               "id": 1271,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "160:0:12"
+              "src": "166:0:12"
             },
             "scope": 1282,
-            "src": "132:114:12",
+            "src": "135:117:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 1283,
-        "src": "34:214:12"
+        "src": "34:220:12"
       }
     ],
-    "src": "0:249:12"
+    "src": "0:255:12"
   },
   "compiler": {
     "name": "solc",
@@ -634,8 +634,7 @@
     }
   },
   "schemaVersion": "3.0.19",
-  "updatedAt": "2019-11-21T03:19:29.020Z",
-  "networkType": "ethereum",
+  "updatedAt": "2019-11-21T03:23:20.877Z",
   "devdoc": {
     "methods": {}
   },
