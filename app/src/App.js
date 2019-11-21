@@ -5,14 +5,14 @@ import { LoadingContainer } from "@drizzle/react-components";
 import "./App.css";
 
 import drizzleOptions from "./drizzleOptions";
-import MyContainer from "./MyContainer";
+import HomeContainer from "./HomeContainer";
 
 class App extends Component {
   render() {
     return (
       <DrizzleProvider options={drizzleOptions}>
         <LoadingContainer>
-          <MyContainer />
+          <HomeContainer />
         </LoadingContainer>
       </DrizzleProvider>
     );

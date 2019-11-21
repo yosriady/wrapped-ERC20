@@ -1,4 +1,4 @@
-import MyComponent from "./MyComponent";
+import HomePage from "./HomePage";
 import { drizzleConnect } from "@drizzle/react-plugin";
 
 const mapStateToProps = state => {
@@ -7,9 +7,12 @@ const mapStateToProps = state => {
     SimpleStorage: state.contracts.SimpleStorage,
     TutorialToken: state.contracts.TutorialToken,
     drizzleStatus: state.drizzleStatus,
+    web3: state.web3,
+    network: state.web3.networkId,
+    contracts: state.contracts,
   };
 };
 
-const MyContainer = drizzleConnect(MyComponent, mapStateToProps);
+const HomeContainer = drizzleConnect(HomePage, mapStateToProps);
 
-export default MyContainer;
+export default HomeContainer;

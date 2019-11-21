@@ -9,21 +9,17 @@ import logo from "./logo.png";
 
 const WPAY_EXCHANGE_ADDRESS = '0x172f95f4e9E3C92dA07671DaD52Cea341d16B987'; // TODO
 
-export default ({ accounts }) => (
+export default ({ accounts, contracts, network }) => (
   <div className="App">
     <div>
       <img src={logo} alt="drizzle-logo" />
-      <h1>WPAY Token Swap</h1>
+      <h1>WPAY Token Swap (networkID {network})</h1>
       <AccountData accountIndex={0} units="ether" precision={3} />
     </div>
 
     <div className="section">
       <h2>PAY</h2>
-      <p>
-        <strong>Mint PAY: </strong>
-        <ContractForm contract="PAYToken" method="mint" />
-      </p>
-
+      <p>{}</p>
       <p>
         <strong>PAY Balance: </strong>
         <ContractData contract="PAYToken" method="balanceOf" methodArgs={[accounts[0]]}/>
@@ -36,16 +32,18 @@ export default ({ accounts }) => (
     </div>
 
     <div className="section">
-      <h2>SimpleStorage</h2>
+      <h2>WPAY</h2>
       <p>
-        This shows a simple ContractData component with no arguments, along with
-        a form to set its value.
+        TODO
       </p>
+    </div>    
+
+
+      <div className="section">
+      <h2>WPAY Exchange</h2>
       <p>
-        <strong>Stored Value: </strong>
-        <ContractData contract="SimpleStorage" method="storedData" />
+        TODO
       </p>
-      <ContractForm contract="SimpleStorage" method="set" />
     </div>
   </div>
 );
