@@ -1,20 +1,17 @@
-import SimpleStorage from "./contracts/SimpleStorage.json";
+import Web3 from "web3";
+import PAY from "./abis/PAY.json";
+import WPAY from "./abis/WPAY.json";
+import WPAYExchange from "./abis/WPAYExchange.json";
 
 const options = {
-  web3: {
-    block: false,
-    fallback: {
-      type: "ws",
-      url: "ws://127.0.0.1:9545",
-    },
-  },
-  contracts: [SimpleStorage],
+  contracts: [PAY, WPAY, WPAYExchange],
   events: {
-    SimpleStorage: ["StorageSet"],
+    PAY: ["Approval", "Transfer"],
+    WPAY: ["Approval", "Transfer"],
+    WPAYExchange: ["Deposited", "Withdrawn"]
   },
   polls: {
-    // set polling interval to 30secs so we don't get buried in poll events
-    accounts: 30000,
+    accounts: 1500,
   },
 };
 
